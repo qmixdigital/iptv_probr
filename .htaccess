@@ -1,0 +1,23 @@
+# Inicia o motor de reescrita do Apache
+RewriteEngine On
+
+# Remove a extensão .html de arquivos acessados diretamente
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# Redireciona internamente URLs sem .html para arquivos .html (se existirem)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Opcional: Forçar HTTPS (recomendado)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Opcional: Forçar www ou não-www (escolha um)
+# Para forçar WWW:
+# RewriteCond %{HTTP_HOST} ^iptvprobr\.com [NC]
+# RewriteRule ^(.*)$ https://www.iptvprobr.com/$1 [L,R=301]
+# Para forçar NÃO-WWW:
+# RewriteCond %{HTTP_HOST} ^www\.iptvprobr\.com [NC]
+# RewriteRule ^(.*)$ https://iptvprobr.com/$1 [L,R=301]
