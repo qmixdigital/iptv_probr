@@ -24,14 +24,10 @@
 
     <link rel="icon" href="images/teste_iptv_pro_favicon.svg" type="image/svg+xml">
     
-    <!-- Preconnect para domínios de fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Google Fonts carregado -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&display=swap">
     
-    <!-- Google Tag Manager -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> <!-- SUBSTITUA SEU ID -->
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -146,7 +142,7 @@
         :root {
             --primary-color: #00AEEF; 
             --primary-hover: #008BC7;
-            --cta-bg-color: #005C8A; /* Azul mais escuro para CTA (WCAG AA para texto branco #FFF: 5.05) */
+            --cta-bg-color: #005C8A; 
             
             --background-color: #121212; 
             --surface-color: #1E1E1E; 
@@ -160,12 +156,16 @@
 
             --font-headings: 'Oswald', sans-serif;
             --font-body: 'Poppins', sans-serif;
+            --font-size-base: 1rem; /* 16px por padrão, será ajustado para mobile */
+            --font-size-small: 0.875rem; /* 14px */
+            --font-size-smaller: 0.75rem; /* 12px */
 
-            --section-padding: 50px 0; 
+
+            --section-padding: 55px 0; /* Ajustado */
             --container-width: 1140px;
-            --border-radius: 8px; 
-            --box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); 
-            --box-shadow-hover: 0 10px 30px rgba(0, 174, 239, 0.15); 
+            --border-radius: 10px; /* Ajustado */
+            --box-shadow: 0 5px 18px rgba(0, 0, 0, 0.22); /* Ajustado */
+            --box-shadow-hover: 0 8px 28px rgba(0, 174, 239, 0.16); /* Ajustado */
         }
 
         *, *::before, *::after {
@@ -183,7 +183,8 @@
             background-color: var(--background-color);
             color: var(--text-color);
             font-family: var(--font-body);
-            line-height: 1.6; 
+            font-size: var(--font-size-base); /* Usando variável para o corpo */
+            line-height: 1.65; 
             font-weight: 400;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -199,21 +200,21 @@
         h1, h2, h3, h4, h5, h6 {
             font-family: var(--font-headings);
             color: var(--text-headings);
-            line-height: 1.2; 
+            line-height: 1.25; 
             font-weight: 500;
-            letter-spacing: 0.2px; 
+            letter-spacing: 0.3px; 
         }
-        h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 0.5em; } 
-        h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin-bottom: 0.5em; } 
-        h3 { font-size: clamp(1.2rem, 3vw, 1.6rem); margin-bottom: 0.4em; } 
+        h1 { font-size: clamp(2.2rem, 4.5vw, 3.5rem); margin-bottom: 0.5em; } 
+        h2 { font-size: clamp(1.7rem, 3.5vw, 2.6rem); margin-bottom: 0.6em; } 
+        h3 { font-size: clamp(1.3rem, 2.8vw, 1.8rem); margin-bottom: 0.4em; } 
         .faq-item summary h3 { 
-            font-size: 1rem; 
+            font-size: 1.05rem; 
             font-weight: 500; 
             margin:0; 
-            color: var(--text-headings); /* Garante cor do heading */
+            color: var(--text-headings); 
         }
 
-        p { margin-bottom: 0.8em; font-size: 0.9rem; color: var(--text-muted); } 
+        p { margin-bottom: 1em; /* Aumentado um pouco */ font-size: var(--font-size-base); color: var(--text-muted); } 
         p:last-child { margin-bottom: 0; }
         a { color: var(--primary-color); text-decoration: none; transition: color 0.2s ease; } 
         a:hover { color: var(--primary-hover); }
@@ -238,19 +239,19 @@
         }
         .navbar-brand {
             font-family: var(--font-headings);
-            font-size: 1.6rem; 
+            font-size: 1.7rem; 
             font-weight: 700;
             color: var(--text-headings);
         }
         .navbar-brand .highlight { color: var(--primary-color); }
         .nav-links { list-style: none; display: flex; }
-        .nav-links li { margin-left: 1.5rem; } 
+        .nav-links li { margin-left: 1.6rem; } 
         .nav-links a {
             color: var(--text-muted);
             font-weight: 500;
-            font-size: 0.8rem; 
+            font-size: 0.85rem; 
             text-transform: uppercase;
-            padding-bottom: 0.3rem; 
+            padding-bottom: 0.4rem; 
             border-bottom: 2px solid transparent;
             transition: color 0.2s ease, border-bottom-color 0.2s ease;
         }
@@ -262,12 +263,9 @@
 
         /* --- Hero Section --- */
         .hero {
-            /* IMPORTANTE: SUBSTITUA PELA SUA IMAGEM DE FUNDO REAL E OTIMIZADA (WEBP) */
-            /* Idealmente, esta imagem deve ter boa compressão e ser servida em WebP. */
-            /* Ex: background-image: url('images/hero-background-iptv.webp'); */
             background: linear-gradient(rgba(18, 18, 18, 0.92), rgba(18, 18, 18, 0.99)), 
-                        url('images/hero-background-iptv.webp') no-repeat center center/cover; /* Caminho para imagem local */
-            padding: 120px 0 70px; 
+                        url('images/hero-background-iptv.webp') no-repeat center center/cover; 
+            padding: 130px 0 75px; /* Ajustado */
             text-align: center;
             min-height: auto; 
             display: flex;
@@ -275,7 +273,7 @@
             justify-content: center;
             align-items: center;
         }
-        .hero-content { max-width: 650px; } 
+        .hero-content { max-width: 700px; } 
         .hero h1 {
             color: var(--text-headings);
             font-weight: 700;
@@ -285,30 +283,33 @@
             color: var(--primary-color);
         }
         .hero p.subtitle {
-            font-size: 1.05rem; 
+            font-size: 1.1rem; 
             color: var(--text-color);
-            margin-bottom: 1.5em; 
+            margin-bottom: 1.6em; 
             font-weight: 300;
+            max-width: 600px; /* Limita largura do subtitulo */
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* --- Buttons --- */
         .btn {
             display: inline-block;
-            padding: 0.7em 1.6em; 
+            padding: 0.75em 1.8em; 
             font-family: var(--font-body);
             font-weight: 500; 
-            font-size: 0.85rem; 
+            font-size: 0.9rem; 
             text-transform: uppercase;
             letter-spacing: 0.5px;
             border-radius: 50px; 
-            transition: transform 0.2s ease, box-shadow 0.2s ease, background-image 0.2s ease; /* Adicionado background-image para gradiente */
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-image 0.2s ease; 
             cursor: pointer;
             border: none;
             text-align: center;
         }
         .btn-primary {
             background-image: linear-gradient(to right, var(--primary-color) 0%, var(--primary-hover) 60%, var(--primary-hover) 100%);
-            background-size: 220% auto; /* Aumentado para efeito mais suave */
+            background-size: 220% auto; 
             color: var(--text-on-primary);
             box-shadow: 0 3px 10px rgba(0, 174, 239, 0.15); 
         }
@@ -327,33 +328,33 @@
             color: var(--text-on-primary);
             transform: translateY(-1px);
         }
-        .btn-group { display: flex; gap: 0.7rem; justify-content: center; flex-wrap: wrap; } 
+        .btn-group { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; } 
 
         /* --- Section General --- */
         .section {
             padding: var(--section-padding);
         }
         .section-darker { background-color: var(--surface-color); }
-        .section-title { text-align: center; margin-bottom: 2rem; } 
+        .section-title { text-align: center; margin-bottom: 2.5rem; } 
         .section-title h2 { font-weight: 700; }
         .section-title h2 .highlight { color: var(--primary-color); }
         .section-title p.lead {
-            font-size: 1rem; 
+            font-size: 1.05rem; 
             color: var(--text-muted);
-            max-width: 580px; 
-            margin: 0.3em auto 0; 
+            max-width: 620px; 
+            margin: 0.4em auto 0; 
             font-weight: 300;
         }
 
         /* --- Diferenciais/Features Section --- */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%/2, max(240px, 100%/3)), 1fr)); 
-            gap: 1.5rem; 
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Ajustado para desktop */
+            gap: 2rem; 
         }
         .feature-card {
             background-color: var(--surface-color);
-            padding: 1.5rem 1.2rem; 
+            padding: 2rem 1.5rem; /* Aumentado padding para desktop */
             border-radius: var(--border-radius);
             text-align: center;
             border: 1px solid var(--border-color);
@@ -363,29 +364,28 @@
             flex-direction: column; 
         }
         .feature-card:hover { 
-            transform: translateY(-4px); 
-            box-shadow: 0 6px 15px rgba(0, 174, 239, 0.1); 
+            transform: translateY(-5px); /* Aumentado hover effect */
+            box-shadow: 0 7px 18px rgba(0, 174, 239, 0.12); 
         }
         .feature-card img.feature-icon {
-            width: 80px; 
-            height: 80px;
+            width: 90px; 
+            height: 90px;
             object-fit: cover;
-            margin: 0 auto 1rem auto; 
+            margin: 0 auto 1.2rem auto; 
             border-radius: 50%; 
             border: 2px solid var(--primary-color); 
-            padding: 3px; 
+            padding: 4px; 
             background-color: var(--background-color); 
         }
         .feature-card h3 {
             color: var(--text-headings);
-            font-size: 1.1rem; 
+            font-size: 1.25rem; /* Aumentado para desktop */
             font-weight: 600; 
-            margin-bottom: 0.4rem; 
+            margin-bottom: 0.5rem; 
         }
-        .feature-card p {
-            font-size: 0.8rem; 
+        .feature-card p { /* Usará --font-size-base, que será 1rem em desktop */
             color: var(--text-muted);
-            line-height: 1.5; 
+            line-height: 1.6; 
             flex-grow: 1; 
         }
 
@@ -393,49 +393,48 @@
         .steps-container {
             display: flex;
             flex-direction: column;
-            gap: 1rem; 
-            max-width: 580px; 
+            gap: 1.2rem; 
+            max-width: 650px; /* Aumentado para desktop */
             margin: 0 auto;
         }
         .step-item {
             background-color: var(--surface-color);
-            padding: 1rem; 
+            padding: 1.2rem 1.5rem; /* Aumentado padding */
             border-radius: var(--border-radius);
             display: flex;
             align-items: center; 
-            gap: 0.8rem; 
+            gap: 1rem; 
             border: 1px solid var(--border-color);
              transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         .step-item:hover {
-            transform: translateX(3px); 
-            box-shadow: 0 3px 10px rgba(0, 174, 239, 0.08); 
+            transform: translateX(4px); 
+            box-shadow: 0 4px 12px rgba(0, 174, 239, 0.09); 
         }
         .step-number {
             background-color: var(--primary-color);
             color: var(--text-on-primary);
-            min-width: 32px; 
-            height: 32px;
+            min-width: 38px; 
+            height: 38px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 1rem; 
+            font-size: 1.1rem; 
             font-weight: 700;
             font-family: var(--font-headings);
             flex-shrink: 0; 
         }
         .step-content h3 {
-            font-size: 1.05rem; 
+            font-size: 1.15rem; 
             color: var(--text-headings);
-            margin-bottom: 0.2em; 
+            margin-bottom: 0.25em; 
         }
-        .step-content p {
-            font-size: 0.8rem; 
+        .step-content p { /* Usará --font-size-base */
             color: var(--text-muted);
         }
         .steps-container + .btn-primary {
-             margin-top: 1.8rem; 
+             margin-top: 2rem; 
         }
 
 
@@ -444,17 +443,17 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             align-items: center;
-            gap: 1.8rem; 
+            gap: 2.5rem; /* Aumentado gap para desktop */
         }
         .content-image-layout.image-left .content-image { order: -1; }
         .content-text { 
             text-align: left;
         }
-        .content-text h2 { margin-bottom: 0.4em; text-align: left; } 
-        .content-text p { text-align: left; }
+        .content-text h2 { margin-bottom: 0.5em; text-align: left; } 
+        .content-text p { text-align: left; } /* Já usará --font-size-base */
         .content-image img {
             width: 100%;
-            max-width: 350px; 
+            max-width: 420px; /* Aumentado para desktop */
             height: auto;
             aspect-ratio: 1/1;
             object-fit: cover;
@@ -463,42 +462,42 @@
             margin: 0 auto; 
              border: 2px solid var(--border-color); 
         }
-         .content-image-layout .btn { margin-top: 0.8em; } 
+         .content-image-layout .btn { margin-top: 1em; } 
 
 
         /* --- Testimonials --- */
         .testimonial-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            gap: 1.2rem; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Aumentado minmax */
+            gap: 1.8rem; 
         }
         .testimonial-card {
             background-color: var(--surface-color);
-            padding: 1.2rem; 
+            padding: 1.8rem; /* Aumentado padding */
             border-radius: var(--border-radius);
             border: 1px solid var(--border-color);
             position: relative;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1); 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
         }
          .testimonial-card:hover { 
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            transform: translateY(-4px); /* Aumentado hover */
+            box-shadow: 0 6px 18px rgba(0,0,0,0.18);
         }
         .testimonial-card::before { 
             content: '“';
             font-family: Georgia, serif;
-            font-size: 2.8rem; 
+            font-size: 3.5rem; /* Aumentado */
             color: var(--primary-color);
-            opacity: 0.2; 
+            opacity: 0.22; 
             position: absolute;
-            top: 0.3rem; 
-            left: 0.6rem; 
+            top: 0.4rem; 
+            left: 0.8rem; 
             line-height: 1;
         }
         .testimonial-card p.quote {
             font-style: italic;
-            margin-bottom: 0.8rem; 
-            font-size: 0.9rem; 
+            margin-bottom: 1rem; 
+            font-size: var(--font-size-base); /* Padronizado */
             color: var(--text-color);
             position: relative; 
         }
@@ -506,21 +505,21 @@
             text-align: right;
             font-weight: 600;
             color: var(--primary-color);
-            font-size: 0.85rem; 
+            font-size: 0.9rem; 
         }
         .testimonial-card p.author strong { color: var(--text-headings); }
 
         /* --- FAQ --- */
-        .faq-list { max-width: 680px; margin: 0 auto; } 
+        .faq-list { max-width: 720px; margin: 0 auto; } /* Aumentado max-width */
         .faq-item {
             background-color: var(--surface-color);
-            margin-bottom: 0.6rem; 
+            margin-bottom: 0.7rem; 
             border-radius: var(--border-radius);
             border: 1px solid var(--border-color);
             overflow: hidden; 
         }
         .faq-item summary {
-            padding: 0.9rem 1.1rem; 
+            padding: 1rem 1.3rem; 
             cursor: pointer;
             color: var(--text-headings);
             list-style: none; 
@@ -532,17 +531,17 @@
         .faq-item summary:hover { background-color: var(--surface-hover); }
         .faq-item summary::-webkit-details-marker { display: none; } 
         .faq-icon {
-            font-size: 1rem; 
+            font-size: 1.05rem; 
             color: var(--primary-color);
             transition: transform 0.2s ease; 
-            margin-left: 0.7em; 
-            flex-shrink: 0; /* Para não encolher */
+            margin-left: 0.8em; 
+            flex-shrink: 0; 
         }
         .faq-item[open] summary .faq-icon { transform: rotate(45deg); }
         .faq-answer {
-            padding: 0 1.1rem 0.9rem; 
+            padding: 0 1.3rem 1rem; 
             color: var(--text-muted);
-            font-size: 0.8rem; 
+            font-size: var(--font-size-small); /* Usando variável para resposta do FAQ */
         }
         .faq-item[open] .faq-answer { animation: fadeInAnswer 0.3s ease-out; } 
 
@@ -554,12 +553,12 @@
         /* --- CTA Section --- */
         .cta-section {
             background-color: var(--cta-bg-color); 
-            padding: 3rem 0; 
+            padding: 3.5rem 0; 
             text-align: center;
             color: var(--text-on-primary);
         }
         .cta-section h2 { color: var(--text-on-primary); font-weight: 700; }
-        .cta-section p { color: rgba(255,255,255,0.9); max-width: 480px; margin: 0.3em auto 1.2em; font-size: 0.95rem;} 
+        .cta-section p { color: rgba(255,255,255,0.9); max-width: 520px; margin: 0.4em auto 1.5em; font-size: 1rem;} 
         .cta-section .btn-primary { 
             background: #FFFFFF;
             color: var(--cta-bg-color); 
@@ -573,23 +572,23 @@
         /* --- Footer --- */
         .footer {
             background-color: var(--surface-color);
-            padding: 2rem 0 1rem; 
+            padding: 2.5rem 0 1.2rem; 
             border-top: 1px solid var(--border-color);
         }
         .footer-brand {
             font-family: var(--font-headings);
-            font-size: 1.6rem; 
+            font-size: 1.7rem; 
             font-weight: 700;
             color: var(--text-headings);
-            margin-bottom: 0.3em; 
+            margin-bottom: 0.4em; 
             text-align: center; 
         }
         .footer-brand .highlight { color: var(--primary-color); }
-        .footer-links { list-style: none; display: flex; justify-content: center; gap: 0.8rem; margin-bottom: 0.8rem; flex-wrap: wrap;} 
-        .footer-links a { color: var(--text-muted); font-size: 0.75rem; } 
+        .footer-links { list-style: none; display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;} 
+        .footer-links a { color: var(--text-muted); font-size: var(--font-size-small); } 
         .footer-links a:hover { color: var(--primary-color); }
-        .footer-copyright { font-size: 0.7rem; color: #999; text-align: center; } 
-        .footer-copyright .legal-disclaimer { font-size: 0.6rem; color: #888; margin-top: 0.3rem; } 
+        .footer-copyright { font-size: var(--font-size-smaller); color: #999; text-align: center; } 
+        .footer-copyright .legal-disclaimer { font-size: calc(var(--font-size-smaller) - 0.05rem); color: #888; margin-top: 0.4rem; } 
 
         /* --- WhatsApp Float --- */
         .whatsapp-float {
@@ -607,23 +606,62 @@
         .whatsapp-float:hover { transform: scale(1.05); background-color: #1DAE50; } 
         .whatsapp-float svg { width: 24px; height: 24px; fill: #FFFFFF; } 
 
+        /* --- Responsive Adjustments --- */
 
-        /* --- Responsive --- */
-        @media (max-width: 992px) { /* Tablet */
+        /* Mobile-first: Definir --font-size-base para mobile */
+        body {
+            --font-size-base: 0.875rem; /* 14px para mobile */
+        }
+        .feature-card p { font-size: var(--font-size-small); } /* 12px para cards no mobile */
+        .step-content p { font-size: var(--font-size-small); }
+        .testimonial-card p.quote { font-size: 0.9rem; } /* Levemente maior que o small */
+        .faq-answer { font-size: var(--font-size-small); }
+
+
+        @media (min-width: 769px) { /* Tablet e acima */
+            body {
+                --font-size-base: 0.9375rem; /* 15px para tablet */
+            }
+            .feature-card p { font-size: var(--font-size-base); } /* Usa o base do tablet */
+            .step-content p { font-size: var(--font-size-base); }
+            .testimonial-card p.quote { font-size: 0.95rem; }
+            .faq-answer { font-size: var(--font-size-base); }
+        }
+
+
+        @media (min-width: 993px) { /* Desktop */
+            body {
+                --font-size-base: 1rem; /* 16px para desktop */
+            }
+            /* Aqui você pode redefinir outros tamanhos se necessário para desktop, */
+            /* mas muitos já usarão o --font-size-base que agora é 1rem */
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr); /* Força 3 colunas em desktop */
+            }
+             .feature-card img.feature-icon {
+                width: 100px; 
+                height: 100px;
+            }
+            .content-image img {
+                max-width: 450px; 
+            }
+             .testimonial-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+
+        @media (max-width: 992px) { /* Tablet - ajustes de layout */
             .content-image-layout { grid-template-columns: 1fr; gap: 1.8rem; } 
             .content-image-layout.image-left .content-image { order: 0; } 
-            /* .content-image-layout .content-text { text-align: center; } */ /* Removido para manter à esquerda no mobile */
-            /* .content-image-layout .content-text h2, */
-            /* .content-image-layout .content-text p { text-align: center; } */ /* Removido */
-             .content-image img { max-width: 320px; } 
+             .content-image img { max-width: 350px; } 
             
-             .features-grid {
-                grid-template-columns: repeat(auto-fit, minmax(min(100%/1, max(230px, 100%/2)), 1fr)); 
+             .features-grid { /* Garante 2 colunas em tablet, se couber */
+                grid-template-columns: repeat(auto-fit, minmax(min(100%/1, max(280px, 100%/2)), 1fr)); 
              }
         }
 
-        @media (max-width: 768px) { /* Mobile */
-            html { font-size: 93.75%; } 
+        @media (max-width: 768px) { /* Mobile - ajustes de layout */
             .navbar-container { position: relative; }
             .mobile-menu-toggle {
                 display: block;
@@ -652,7 +690,7 @@
             .nav-links a { display: block; padding: 0.6rem 1rem; border-bottom: none; } 
             .nav-links a:hover, .nav-links a.active { background-color: rgba(0, 174, 239, 0.08); color: var(--primary-color); } 
             
-            .hero { padding: 90px 0 50px; } 
+            .hero { padding: 100px 0 60px; } 
             .hero-content { text-align: left; padding: 0 15px; }
             .hero-content h1, .hero-content p.subtitle { text-align: left; }
             .hero p.subtitle { font-size: 0.95rem; } 
@@ -674,7 +712,6 @@
             .section-title h2 { font-size: clamp(1.5rem, 5vw, 2rem); }
             .section-title p.lead { font-size: 0.9rem; }
 
-            /* Garante que o texto da seção conteúdo e missão fique à esquerda no mobile */
             .content-image-layout .content-text {
                 text-align: left;
             }
@@ -697,7 +734,7 @@
             h2 { font-size: clamp(1.4rem, 4vw, 1.8rem); }
             h3 { font-size: clamp(1.1rem, 3vw, 1.4rem); }
             .faq-item summary h3 { font-size: 0.95rem; }
-            p { font-size: 0.85rem;}
+            /* p usará o --font-size-base que já é 0.875rem (14px) no mobile */
             .hero p.subtitle { font-size: 0.9rem; }
         }
 
@@ -741,37 +778,31 @@
                 </div>
                 <div class="features-grid">
                     <div class="feature-card">
-                        <!-- IMPORTANTE: Otimize esta imagem para ~180x180px (para retina 2x) e use formato WebP -->
                         <img src="images/teste%20IPTV%208%20horas.webp" alt="Teste IPTV com tempo generoso para explorar" class="feature-icon" loading="lazy">
                         <h3>Teste Amplo</h3>
                         <p>Aproveite ao máximo seu acesso para explorar nosso catálogo completo de canais, filmes e séries sem pressa.</p>
                     </div>
                     <div class="feature-card">
-                         <!-- IMPORTANTE: Otimize esta imagem para ~180x180px e use formato WebP -->
                         <img src="images/teste%20iptv%206%20horas.webp" alt="Teste IPTV com flexibilidade para sua rotina" class="feature-icon" loading="lazy">
                         <h3>Flexibilidade Total</h3>
                         <p>Nossos testes são pensados para se adaptar à sua rotina, permitindo uma avaliação completa no seu tempo.</p>
                     </div>
                     <div class="feature-card">
-                         <!-- IMPORTANTE: Otimize esta imagem para ~180x180px e use formato WebP -->
                         <img src="images/teste%20iptv%20imediato.webp" alt="Teste IPTV com acesso imediato e rápido" class="feature-icon" loading="lazy">
                         <h3>Acesso Imediato</h3>
                         <p>Solicite e receba seu acesso de forma <strong>rápida e descomplicada</strong>, para começar a usar em minutos.</p>
                     </div>
                     <div class="feature-card">
-                         <!-- IMPORTANTE: Otimize esta imagem para ~180x180px e use formato WebP -->
                         <img src="images/teste%20iptv%20via%20email.webp" alt="Teste IPTV entregue de forma conveniente via e-mail ou WhatsApp" class="feature-icon" loading="lazy">
                         <h3>Conveniência Digital</h3>
                         <p>Todas as instruções e dados do seu teste são enviados diretamente para o seu <strong>e-mail</strong> ou <strong>WhatsApp</strong>.</p>
                     </div>
                     <div class="feature-card">
-                         <!-- IMPORTANTE: Otimize esta imagem para ~180x180px e use formato WebP -->
                         <img src="images/teste%20iptv%20xciptv.webp" alt="Teste IPTV com ampla compatibilidade com apps como XCIPTV" class="feature-icon" loading="lazy">
                         <h3>Ampla Compatibilidade</h3>
                         <p>Funciona perfeitamente com apps populares como <strong>XCIPTV</strong> e em diversos dispositivos (Smart TVs, mobile, etc).</p>
                     </div>
                     <div class="feature-card">
-                         <!-- IMPORTANTE: Otimize esta imagem para ~180x180px e use formato WebP -->
                         <img src="images/gerador%20de%20teste%20IPTV.webp" alt="Gerador de Teste IPTV prático e fácil de usar" class="feature-icon" loading="lazy">
                         <h3>Geração Simplificada</h3>
                         <p>Nosso sistema para solicitar o teste é pensado para ser <strong>fácil e intuitivo</strong>, sem dores de cabeça.</p>
@@ -834,7 +865,6 @@
                         <a href="https://teste.iptvprobr.com/" class="btn btn-secondary" target="_blank" rel="noopener">Explorar Conteúdo Agora</a>
                     </div>
                     <div class="content-image">
-                        <!-- IMPORTANTE: Otimize esta imagem para ~500x500px e use formato WebP -->
                         <img src="images/teste%20IPTV%208%20horas.webp" alt="Variedade de conteúdo no Teste IPTV" loading="lazy">
                     </div>
                 </div>
