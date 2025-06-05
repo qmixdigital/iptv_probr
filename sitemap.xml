@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://iptvprobr.com/</loc>
+    <lastmod>2025-06-06</lastmod> <!-- Atualize com a data da última modificação real -->
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://iptvprobr.com/quem-somos.html</loc>
+    <lastmod>2025-06-06</lastmod> <!-- Atualize com a data da última modificação real -->
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://iptvprobr.com/politica-de-privacidade.html</loc>
+    <lastmod>2025-06-06</lastmod> <!-- Atualize com a data da última modificação real -->
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://iptvprobr.com/termos-de-uso.html</loc>
+    <lastmod>2025-06-06</lastmod> <!-- Atualize com a data da última modificação real -->
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://teste.iptvprobr.com/</loc>
+    <lastmod>2025-06-06</lastmod> <!-- Data da última modificação da página de teste -->
+    <changefreq>monthly</changefreq> 
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
