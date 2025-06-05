@@ -24,16 +24,12 @@
 
     <link rel="icon" href="images/teste_iptv_pro_favicon.svg" type="image/svg+xml">
     
-    <!-- Preload LCP Hero Background (se você tiver uma imagem específica) -->
-    <!-- <link rel="preload" as="image" href="images/hero-background-optimized.webp"> -->
+    <!-- Preconnect para domínios de fontes e outros CDNs críticos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Preload Google Fonts CSS (para tentar reduzir bloqueio) -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&display=swap"></noscript>
-    
-    <!-- AOS CSS (Animate on Scroll) -->
-    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
+    <!-- Google Fonts carregado de forma otimizada -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&display=swap">
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> <!-- SUBSTITUA SEU ID -->
     <script>
@@ -134,7 +130,7 @@
       "itemListElement": [{
         "@type": "ListItem",
         "position": 1,
-        "name": "Teste IPTV", /* Nome alterado */
+        "name": "Teste IPTV",
         "item": "https://iptvprobr.com/"
       },{
         "@type": "ListItem",
@@ -149,26 +145,26 @@
         :root {
             --primary-color: #00AEEF; 
             --primary-hover: #008BC7;
-            --cta-bg-color: #007FAF; /* Azul um pouco mais escuro para CTA, melhorando contraste */
+            --cta-bg-color: #006C9A; /* Azul mais escuro para CTA (WCAG AA para texto branco) */
             
             --background-color: #121212; 
             --surface-color: #1E1E1E; 
             --surface-hover: #2a2a2a;
-            --border-color: #333333;
+            --border-color: #383838; /* Levemente mais claro para sutilidade */
 
             --text-color: #E0E0E0;
-            --text-muted: #B0B0B0; /* Levemente mais claro para melhor contraste no footer */
+            --text-muted: #B8B8B8; /* Mais claro para melhor contraste */
             --text-headings: #FFFFFF;
-            --text-on-primary: #FFFFFF; /* Texto sobre fundo primário (CTA) */
+            --text-on-primary: #FFFFFF; 
 
             --font-headings: 'Oswald', sans-serif;
             --font-body: 'Poppins', sans-serif;
 
-            --section-padding: 60px 0; /* Reduzido para diminuir espaçamentos gerais */
+            --section-padding: 50px 0; 
             --container-width: 1140px;
-            --border-radius: 10px; /* Levemente reduzido */
-            --box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25); /* Ajustado */
-            --box-shadow-hover: 0 12px 35px rgba(0, 174, 239, 0.18); /* Ajustado */
+            --border-radius: 8px; 
+            --box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); 
+            --box-shadow-hover: 0 10px 30px rgba(0, 174, 239, 0.15); 
         }
 
         *, *::before, *::after {
@@ -186,10 +182,11 @@
             background-color: var(--background-color);
             color: var(--text-color);
             font-family: var(--font-body);
-            line-height: 1.65; /* Ajustado */
+            line-height: 1.6; 
             font-weight: 400;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden; /* Previne scroll horizontal */
         }
 
         .container {
@@ -201,35 +198,35 @@
         h1, h2, h3, h4, h5, h6 {
             font-family: var(--font-headings);
             color: var(--text-headings);
-            line-height: 1.25; /* Ajustado */
+            line-height: 1.2; 
             font-weight: 500;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.2px; /* Reduzido */
         }
-        h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); margin-bottom: 0.5em; } 
-        h2 { font-size: clamp(1.7rem, 4vw, 2.6rem); margin-bottom: 0.6em; } 
-        h3 { font-size: clamp(1.3rem, 3vw, 1.7rem); margin-bottom: 0.4em; } 
+        h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 0.5em; } 
+        h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin-bottom: 0.5em; } 
+        h3 { font-size: clamp(1.2rem, 3vw, 1.6rem); margin-bottom: 0.4em; } 
         .faq-item summary h3 { 
-            font-size: 1.05rem; 
-            font-weight: 500; /* Ajustado */
+            font-size: 1rem; 
+            font-weight: 500; 
             margin:0; 
         }
 
-        p { margin-bottom: 1em; font-size: 0.95rem; color: var(--text-muted); } /* Ajustado */
+        p { margin-bottom: 0.8em; font-size: 0.9rem; color: var(--text-muted); } 
         p:last-child { margin-bottom: 0; }
-        a { color: var(--primary-color); text-decoration: none; transition: color 0.3s ease; }
+        a { color: var(--primary-color); text-decoration: none; transition: color 0.2s ease; } /* Transição mais rápida */
         a:hover { color: var(--primary-hover); }
 
         /* --- Navbar --- */
         .navbar {
-            background-color: rgba(18, 18, 18, 0.85);
-            backdrop-filter: blur(10px);
-            padding: 0.8rem 0; /* Ajustado */
+            background-color: rgba(18, 18, 18, 0.9); /* Mais opaco */
+            backdrop-filter: blur(8px); /* Reduzido blur */
+            padding: 0.7rem 0; 
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Sombra mais sutil */
             border-bottom: 1px solid var(--border-color);
         }
         .navbar-container {
@@ -239,21 +236,21 @@
         }
         .navbar-brand {
             font-family: var(--font-headings);
-            font-size: 1.7rem; /* Ajustado */
+            font-size: 1.6rem; 
             font-weight: 700;
             color: var(--text-headings);
         }
         .navbar-brand .highlight { color: var(--primary-color); }
         .nav-links { list-style: none; display: flex; }
-        .nav-links li { margin-left: 1.6rem; } /* Ajustado */
+        .nav-links li { margin-left: 1.5rem; } 
         .nav-links a {
             color: var(--text-muted);
             font-weight: 500;
-            font-size: 0.85rem; /* Ajustado */
+            font-size: 0.8rem; 
             text-transform: uppercase;
-            padding-bottom: 0.4rem; /* Ajustado */
+            padding-bottom: 0.3rem; 
             border-bottom: 2px solid transparent;
-            transition: color 0.3s ease, border-bottom-color 0.3s ease;
+            transition: color 0.2s ease, border-bottom-color 0.2s ease;
         }
         .nav-links a:hover, .nav-links a.active {
             color: var(--primary-color);
@@ -263,10 +260,10 @@
 
         /* --- Hero Section --- */
         .hero {
-            /* SUBSTITUA PELA SUA IMAGEM DE FUNDO OTIMIZADA */
-            background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.97)), 
-                        url('https://via.placeholder.com/1920x1080/121212/333333?text=Fundo+IPTV+PRO+BR') no-repeat center center/cover;
-            padding: 140px 0 80px; 
+            /* IMPORTANTE: SUBSTITUA 'via.placeholder.com' PELA SUA IMAGEM DE FUNDO REAL E OTIMIZADA (WEBP) */
+            background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.98)), 
+                        url('https://via.placeholder.com/1920x1080/121212/333333?text=Fundo+IPTV+PRO+BR+Otimizado') no-repeat center center/cover;
+            padding: 120px 0 70px; 
             text-align: center;
             min-height: auto; 
             display: flex;
@@ -274,33 +271,33 @@
             justify-content: center;
             align-items: center;
         }
-        .hero-content { max-width: 700px; } 
+        .hero-content { max-width: 650px; } 
         .hero h1 {
             color: var(--text-headings);
             font-weight: 700;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.25); /* Ajustado */
+            text-shadow: 0 1px 8px rgba(0,0,0,0.2); 
         }
         .hero h1 .highlight {
             color: var(--primary-color);
         }
         .hero p.subtitle {
-            font-size: 1.1rem; 
+            font-size: 1.05rem; 
             color: var(--text-color);
-            margin-bottom: 1.8em; 
+            margin-bottom: 1.5em; 
             font-weight: 300;
         }
 
         /* --- Buttons --- */
         .btn {
             display: inline-block;
-            padding: 0.75em 1.8em; 
+            padding: 0.7em 1.6em; 
             font-family: var(--font-body);
-            font-weight: 500; /* Ajustado */
-            font-size: 0.9rem; 
+            font-weight: 500; 
+            font-size: 0.85rem; 
             text-transform: uppercase;
             letter-spacing: 0.5px;
             border-radius: 50px; 
-            transition: all 0.3s ease;
+            transition: all 0.2s ease; /* Transição mais rápida */
             cursor: pointer;
             border: none;
             text-align: center;
@@ -309,135 +306,133 @@
             background-image: linear-gradient(to right, var(--primary-color) 0%, var(--primary-hover) 70%, var(--primary-hover) 100%);
             background-size: 200% auto;
             color: var(--text-on-primary);
-            box-shadow: 0 4px 12px rgba(0, 174, 239, 0.18); /* Ajustado */
+            box-shadow: 0 3px 10px rgba(0, 174, 239, 0.15); 
         }
         .btn-primary:hover {
             background-position: right center;
-            transform: translateY(-2px); /* Ajustado */
-            box-shadow: 0 6px 15px rgba(0, 174, 239, 0.25); /* Ajustado */
+            transform: translateY(-1px); 
+            box-shadow: 0 5px 12px rgba(0, 174, 239, 0.22); 
         }
         .btn-secondary {
             background-color: transparent;
             color: var(--primary-color);
-            border: 2px solid var(--primary-color);
+            border: 1.5px solid var(--primary-color); /* Borda mais fina */
         }
         .btn-secondary:hover {
             background-color: var(--primary-color);
             color: var(--text-on-primary);
-            transform: translateY(-2px);
+            transform: translateY(-1px);
         }
-        .btn-group { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; } 
+        .btn-group { display: flex; gap: 0.7rem; justify-content: center; flex-wrap: wrap; } 
 
         /* --- Section General --- */
         .section {
             padding: var(--section-padding);
         }
         .section-darker { background-color: var(--surface-color); }
-        .section-title { text-align: center; margin-bottom: 2.5rem; } 
+        .section-title { text-align: center; margin-bottom: 2rem; } 
         .section-title h2 { font-weight: 700; }
         .section-title h2 .highlight { color: var(--primary-color); }
         .section-title p.lead {
-            font-size: 1.05rem; 
+            font-size: 1rem; 
             color: var(--text-muted);
-            max-width: 600px; 
-            margin: 0.4em auto 0; /* Ajustado */
+            max-width: 580px; 
+            margin: 0.3em auto 0; 
             font-weight: 300;
         }
 
         /* --- Diferenciais/Features Section --- */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%/2, max(250px, 100%/3)), 1fr)); 
-            gap: 1.8rem; 
+            grid-template-columns: repeat(auto-fit, minmax(min(100%/2, max(240px, 100%/3)), 1fr)); 
+            gap: 1.5rem; 
         }
         .feature-card {
             background-color: var(--surface-color);
-            padding: 1.8rem 1.5rem; 
+            padding: 1.5rem 1.2rem; 
             border-radius: var(--border-radius);
             text-align: center;
             border: 1px solid var(--border-color);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1); 
+            transition: transform 0.2s ease, box-shadow 0.2s ease; /* Removida transição de border-color por padrão */
             display: flex; 
             flex-direction: column; 
         }
-        .feature-card:hover {
-            transform: translateY(-6px); 
-            box-shadow: var(--box-shadow-hover);
-            border-color: var(--primary-color);
+        .feature-card:hover { /* Efeito hover mais sutil, sem mudança de borda */
+            transform: translateY(-4px); 
+            box-shadow: 0 6px 15px rgba(0, 174, 239, 0.1); 
         }
         .feature-card img.feature-icon {
-            /* IMPORTANTE: Redimensione suas imagens para ~200x200px e use formato WebP */
-            width: 90px; 
-            height: 90px;
+            /* IMPORTANTE: Redimensione suas imagens para ~180x180px (para retina 2x) e use formato WebP */
+            width: 80px; 
+            height: 80px;
             object-fit: cover;
-            margin: 0 auto 1.2rem auto; 
+            margin: 0 auto 1rem auto; 
             border-radius: 50%; 
-            border: 2px solid var(--primary-color); /* Ajustado */
+            border: 2px solid var(--primary-color); 
             padding: 3px; 
             background-color: var(--background-color); 
         }
         .feature-card h3 {
             color: var(--text-headings);
-            font-size: 1.2rem; 
+            font-size: 1.1rem; 
             font-weight: 600; 
-            margin-bottom: 0.5rem; 
+            margin-bottom: 0.4rem; 
         }
         .feature-card p {
-            font-size: 0.85rem; 
+            font-size: 0.8rem; 
             color: var(--text-muted);
-            line-height: 1.55; /* Ajustado */
+            line-height: 1.5; 
             flex-grow: 1; 
         }
 
         /* --- Como Funciona (Steps) --- */
-        .steps-section { position: relative; }
         .steps-container {
             display: flex;
             flex-direction: column;
-            gap: 1.2rem; 
-            max-width: 600px; 
+            gap: 1rem; 
+            max-width: 580px; 
             margin: 0 auto;
         }
         .step-item {
             background-color: var(--surface-color);
-            padding: 1.2rem; 
+            padding: 1rem; 
             border-radius: var(--border-radius);
             display: flex;
-            align-items: flex-start; 
-            gap: 1rem; 
+            align-items: center; /* Centralizado verticalmente */
+            gap: 0.8rem; 
             border: 1px solid var(--border-color);
-             transition: transform 0.3s ease, box-shadow 0.3s ease;
+             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         .step-item:hover {
-            transform: translateX(4px); /* Ajustado */
-            box-shadow: 0 4px 12px rgba(0, 174, 239, 0.1); 
+            transform: translateX(3px); 
+            box-shadow: 0 3px 10px rgba(0, 174, 239, 0.08); 
         }
         .step-number {
             background-color: var(--primary-color);
             color: var(--text-on-primary);
-            min-width: 36px; 
-            height: 36px;
+            min-width: 32px; 
+            height: 32px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 1.1rem; 
+            font-size: 1rem; 
             font-weight: 700;
             font-family: var(--font-headings);
             flex-shrink: 0; 
         }
         .step-content h3 {
-            font-size: 1.1rem; 
+            font-size: 1.05rem; 
             color: var(--text-headings);
-            margin-bottom: 0.2em; /* Ajustado */
+            margin-bottom: 0.2em; 
         }
         .step-content p {
-            font-size: 0.85rem; /* Ajustado */
+            font-size: 0.8rem; 
             color: var(--text-muted);
         }
         .steps-container + .btn-primary {
-             margin-top: 2rem; 
+             margin-top: 1.8rem; 
         }
 
 
@@ -446,55 +441,62 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             align-items: center;
-            gap: 2rem; 
+            gap: 1.8rem; 
         }
         .content-image-layout.image-left .content-image { order: -1; }
+        .content-text { /* Para garantir que no mobile ele fique à esquerda */
+            text-align: left;
+        }
         .content-text h2 { margin-bottom: 0.4em; text-align: left; } 
         .content-text p { text-align: left; }
         .content-image img {
-             /* IMPORTANTE: Redimensione suas imagens (esta para ~600x600px) e use formato WebP */
+             /* IMPORTANTE: Redimensione suas imagens (esta para ~500x500px) e use formato WebP */
             width: 100%;
-            max-width: 380px; 
+            max-width: 350px; 
             height: auto;
             aspect-ratio: 1/1;
             object-fit: cover;
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
             margin: 0 auto; 
-             border: 2px solid var(--border-color); /* Ajustado */
+             border: 2px solid var(--border-color); 
         }
-         .content-image-layout .btn { margin-top: 1em; } 
+         .content-image-layout .btn { margin-top: 0.8em; } 
 
 
         /* --- Testimonials --- */
         .testimonial-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
-            gap: 1.5rem; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 1.2rem; 
         }
         .testimonial-card {
             background-color: var(--surface-color);
-            padding: 1.5rem; 
+            padding: 1.2rem; 
             border-radius: var(--border-radius);
             border: 1px solid var(--border-color);
             position: relative;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1); 
+        }
+         .testimonial-card:hover { /* Efeito hover sutil */
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
         .testimonial-card::before { 
             content: '“';
             font-family: Georgia, serif;
-            font-size: 3rem; 
+            font-size: 2.8rem; 
             color: var(--primary-color);
-            opacity: 0.25; /* Ajustado */
+            opacity: 0.2; 
             position: absolute;
-            top: 0.4rem; /* Ajustado */
-            left: 0.8rem; /* Ajustado */
+            top: 0.3rem; 
+            left: 0.6rem; 
             line-height: 1;
         }
         .testimonial-card p.quote {
             font-style: italic;
-            margin-bottom: 1rem; 
-            font-size: 0.95rem; 
+            margin-bottom: 0.8rem; 
+            font-size: 0.9rem; 
             color: var(--text-color);
             position: relative; 
         }
@@ -502,21 +504,21 @@
             text-align: right;
             font-weight: 600;
             color: var(--primary-color);
-            font-size: 0.9rem; 
+            font-size: 0.85rem; 
         }
         .testimonial-card p.author strong { color: var(--text-headings); }
 
         /* --- FAQ --- */
-        .faq-list { max-width: 700px; margin: 0 auto; } 
+        .faq-list { max-width: 680px; margin: 0 auto; } 
         .faq-item {
             background-color: var(--surface-color);
-            margin-bottom: 0.7rem; 
+            margin-bottom: 0.6rem; 
             border-radius: var(--border-radius);
             border: 1px solid var(--border-color);
             overflow: hidden; 
         }
         .faq-item summary {
-            padding: 1rem 1.2rem; 
+            padding: 0.9rem 1.1rem; 
             cursor: pointer;
             color: var(--text-headings);
             list-style: none; 
@@ -528,94 +530,92 @@
         .faq-item summary:hover { background-color: var(--surface-hover); }
         .faq-item summary::-webkit-details-marker { display: none; } 
         .faq-icon {
-            font-size: 1.1rem; 
+            font-size: 1rem; 
             color: var(--primary-color);
-            transition: transform 0.3s ease;
-            margin-left: 0.8em; 
+            transition: transform 0.2s ease; /* Transição mais rápida */
+            margin-left: 0.7em; 
         }
         .faq-item[open] summary .faq-icon { transform: rotate(45deg); }
         .faq-answer {
-            padding: 0 1.2rem 1rem; 
+            padding: 0 1.1rem 0.9rem; 
             color: var(--text-muted);
-            font-size: 0.85rem; 
+            font-size: 0.8rem; 
         }
-        .faq-item[open] .faq-answer { animation: fadeInAnswer 0.4s ease-out; } /* Ajustado */
+        .faq-item[open] .faq-answer { animation: fadeInAnswer 0.3s ease-out; } 
 
         @keyframes fadeInAnswer {
-            from { opacity: 0; transform: translateY(-8px); } /* Ajustado */
+            from { opacity: 0; transform: translateY(-6px); } 
             to { opacity: 1; transform: translateY(0); }
         }
 
         /* --- CTA Section --- */
         .cta-section {
-            background-color: var(--cta-bg-color); /* Usando a nova variável para melhor contraste */
-            padding: 3.5rem 0; 
+            background-color: var(--cta-bg-color); 
+            padding: 3rem 0; 
             text-align: center;
             color: var(--text-on-primary);
         }
         .cta-section h2 { color: var(--text-on-primary); font-weight: 700; }
-        .cta-section p { color: rgba(255,255,255,0.85); max-width: 500px; margin: 0.4em auto 1.5em; font-size: 1rem;} 
+        .cta-section p { color: rgba(255,255,255,0.9); max-width: 480px; margin: 0.3em auto 1.2em; font-size: 0.95rem;} 
         .cta-section .btn-primary { 
             background: #FFFFFF;
-            color: var(--cta-bg-color); /* Cor do texto do botão sobre fundo branco */
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+            color: var(--cta-bg-color); 
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15); 
         }
         .cta-section .btn-primary:hover {
-            background: rgba(255,255,255,0.9);
-            transform: translateY(-2px) scale(1.03); /* Ajustado */
+            background: rgba(255,255,255,0.95); /* Mais opaco */
+            transform: translateY(-1px) scale(1.02); 
         }
         
         /* --- Footer --- */
         .footer {
             background-color: var(--surface-color);
-            padding: 2.5rem 0 1.2rem; 
-            text-align: center;
+            padding: 2rem 0 1rem; 
             border-top: 1px solid var(--border-color);
         }
         .footer-brand {
             font-family: var(--font-headings);
-            font-size: 1.7rem; 
+            font-size: 1.6rem; 
             font-weight: 700;
             color: var(--text-headings);
-            margin-bottom: 0.4em; 
+            margin-bottom: 0.3em; 
+            text-align: center; /* Manter centralizado em desktop */
         }
         .footer-brand .highlight { color: var(--primary-color); }
-        .footer-links { list-style: none; display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;} 
-        .footer-links a { color: var(--text-muted); font-size: 0.8rem; } 
+        .footer-links { list-style: none; display: flex; justify-content: center; gap: 0.8rem; margin-bottom: 0.8rem; flex-wrap: wrap;} 
+        .footer-links a { color: var(--text-muted); font-size: 0.75rem; } 
         .footer-links a:hover { color: var(--primary-color); }
-        .footer-copyright { font-size: 0.75rem; color: #888; } /* Tornando o copyright um pouco mais escuro */
-        .footer-copyright .legal-disclaimer { font-size: 0.65rem; color: #777; margin-top: 0.4rem; } 
+        .footer-copyright { font-size: 0.7rem; color: #999; text-align: center; } /* Copyright mais claro */
+        .footer-copyright .legal-disclaimer { font-size: 0.6rem; color: #888; margin-top: 0.3rem; } 
 
         /* --- WhatsApp Float --- */
         .whatsapp-float {
             position: fixed;
-            width: 50px; height: 50px; /* Ajustado */
-            bottom: 20px; right: 20px; /* Ajustado */
+            width: 48px; height: 48px; 
+            bottom: 15px; right: 15px; 
             background-color: #25D366; 
             color: #FFFFFF;
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.2); /* Ajustado */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2); 
             z-index: 100;
-            transition: transform 0.3s ease, background-color 0.3s ease;
+            transition: transform 0.2s ease, background-color 0.2s ease;
         }
-        .whatsapp-float:hover { transform: scale(1.08); background-color: #1DAE50; } /* Ajustado */
-        .whatsapp-float img { width: 28px; height: 28px; } /* Ajustado */
+        .whatsapp-float:hover { transform: scale(1.05); background-color: #1DAE50; } 
+        .whatsapp-float svg { width: 24px; height: 24px; fill: #FFFFFF; } /* Para SVG inline */
 
-        /* --- Animations --- */
-        [data-aos] { opacity: 0; transition-property: transform, opacity; } 
 
         /* --- Responsive --- */
         @media (max-width: 992px) { /* Tablet */
-            .content-image-layout { grid-template-columns: 1fr; gap: 2rem; } 
+            .content-image-layout { grid-template-columns: 1fr; gap: 1.8rem; } 
             .content-image-layout.image-left .content-image { order: 0; } 
             .content-image-layout .content-text { text-align: center; }
             .content-image-layout .content-text h2, 
             .content-image-layout .content-text p { text-align: center; }
-             .content-image img { max-width: 350px; } 
+             .content-image img { max-width: 320px; } 
             
              .features-grid {
-                grid-template-columns: repeat(auto-fit, minmax(min(100%/1, max(240px, 100%/2)), 1fr)); 
+                grid-template-columns: repeat(auto-fit, minmax(min(100%/1, max(230px, 100%/2)), 1fr)); 
              }
         }
 
@@ -626,7 +626,7 @@
                 display: block;
                 background: none; border: none; cursor: pointer;
                 padding: 0.5rem;
-                z-index: 1001; /* Para ficar sobre o menu dropdown se sobrepor */
+                z-index: 1001; 
             }
             .mobile-menu-toggle .bar {
                 display: block; width: 25px; height: 3px;
@@ -640,53 +640,62 @@
                 top: 100%; left: 0;
                 width: 100%;
                 background-color: var(--surface-color);
-                padding: 0.8rem 0; /* Ajustado */
+                padding: 0.6rem 0; 
                 box-shadow: 0 5px 10px rgba(0,0,0,0.1);
                 border-top: 1px solid var(--border-color);
             }
             .nav-links.active { display: flex; }
-            .nav-links li { margin: 0.6rem 0; text-align: center; width: 100%; } /* Ajustado */
-            .nav-links a { display: block; padding: 0.7rem 1rem; border-bottom: none; } /* Ajustado */
-            .nav-links a:hover, .nav-links a.active { background-color: rgba(0, 174, 239, 0.1); color: var(--primary-color); }
+            .nav-links li { margin: 0.5rem 0; text-align: center; width: 100%; } 
+            .nav-links a { display: block; padding: 0.6rem 1rem; border-bottom: none; } 
+            .nav-links a:hover, .nav-links a.active { background-color: rgba(0, 174, 239, 0.08); color: var(--primary-color); } /* Mais sutil */
             
-            .hero { padding: 100px 0 60px; } 
-            .hero-content { text-align: left; padding: 0 10px; /* Adiciona padding para não colar nas bordas */}
+            .hero { padding: 90px 0 50px; } 
+            .hero-content { text-align: left; padding: 0 15px; }
             .hero-content h1, .hero-content p.subtitle { text-align: left; }
-            .hero p.subtitle { font-size: 1rem; } 
+            .hero p.subtitle { font-size: 0.95rem; } 
             .btn-group { 
                 flex-direction: column; 
-                align-items: flex-start; /* Alinha botões à esquerda no hero mobile */
+                align-items: flex-start; 
                 width: 100%;
-                gap: 0.7rem; 
+                gap: 0.6rem; 
             }
             .btn-group .btn { 
                 width: auto; 
-                min-width: 200px; 
-                max-width: 90%; 
-                padding: 0.7em 1.4em; 
+                min-width: 180px; 
+                max-width: 95%; 
+                padding: 0.65em 1.3em; 
             }
 
             .features-grid { grid-template-columns: 1fr; } 
-            .section-title { margin-bottom: 2rem; } 
-            .section-title h2 { font-size: clamp(1.6rem, 5vw, 2.2rem); }
-            .section-title p.lead { font-size: 0.95rem; }
+            .section-title { margin-bottom: 1.8rem; } 
+            .section-title h2 { font-size: clamp(1.5rem, 5vw, 2rem); }
+            .section-title p.lead { font-size: 0.9rem; }
 
-            .footer { text-align: left; padding: 2rem 0 1rem; } /* Alinhamento à esquerda para o footer */
+            .content-image-layout .content-text { /* Texto da seção conteúdo e missão à esquerda no mobile */
+                text-align: left;
+            }
+            .content-image-layout .content-text h2,
+            .content-image-layout .content-text p {
+                text-align: left;
+            }
+
+            .footer { text-align: left; padding: 1.8rem 15px 0.8rem; } 
             .footer-brand, .footer-copyright, .footer-copyright .legal-disclaimer { text-align: left; }
-            .footer-links { justify-content: flex-start; flex-direction: column; align-items: flex-start; gap: 0.5rem; } 
+            .footer-links { justify-content: flex-start; flex-direction: column; align-items: flex-start; gap: 0.4rem; } 
             .footer-links li { margin-left: 0; }
         }
          @media (max-width: 480px) { 
-            .hero h1 { font-size: clamp(1.8rem, 6vw, 2.4rem); }
-            .content-image img { max-width: 85%; } 
-            .feature-card img.feature-icon { width: 70px; height: 70px;} 
-            .btn-group .btn { min-width: 170px; }
-            .section-padding { padding: 50px 0; }
-            h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
-            h3 { font-size: clamp(1.2rem, 3vw, 1.5rem); }
-            .faq-item summary h3 { font-size: 1rem; }
+            .hero h1 { font-size: clamp(1.7rem, 6vw, 2.2rem); }
+            .content-image img { max-width: 90%; } 
+            .feature-card img.feature-icon { width: 65px; height: 65px;} 
+            .btn-group .btn { min-width: 160px; }
+            .section-padding { padding: 40px 0; }
+            h2 { font-size: clamp(1.4rem, 4vw, 1.8rem); }
+            h3 { font-size: clamp(1.1rem, 3vw, 1.4rem); }
+            .faq-item summary h3 { font-size: 0.95rem; }
+            p { font-size: 0.85rem;}
+            .hero p.subtitle { font-size: 0.9rem; }
         }
-
 
     </style>
 </head>
@@ -699,7 +708,7 @@
                 <span class="bar"></span><span class="bar"></span><span class="bar"></span>
             </button>
             <ul class="nav-links" id="nav-links-menu">
-                <li><a href="https://iptvprobr.com/">Teste IPTV</a></li> <!-- Link e texto alterados -->
+                <li><a href="https://iptvprobr.com/">Teste IPTV</a></li>
                 <li><a href="#diferenciais">Diferenciais</a></li>
                 <li><a href="#como-funciona">Como Funciona</a></li>
                 <li><a href="#depoimentos">Depoimentos</a></li>
@@ -709,7 +718,7 @@
     </nav>
 
     <header class="hero" id="hero">
-        <div class="hero-content" data-aos="fade-up">
+        <div class="hero-content">
             <h1>Teste IPTV Grátis Agora: <span class="highlight">Conheça o Futuro da TV!</span></h1>
             <p class="subtitle">Qualidade, variedade e acesso imediato sem burocracia. Experimente o melhor do entretenimento digital sem precisar de cartão ou qualquer compromisso.</p>
             <div class="btn-group">
@@ -722,37 +731,43 @@
     <main>
         <section class="section" id="diferenciais">
             <div class="container">
-                <div class="section-title" data-aos="fade-up">
+                <div class="section-title">
                     <h2>Por Que Escolher Nosso <span class="highlight">Teste IPTV?</span></h2>
                     <p class="lead">Oferecemos uma experiência completa para você avaliar o serviço com tranquilidade e todos os recursos à sua disposição.</p>
                 </div>
                 <div class="features-grid">
-                    <div class="feature-card" data-aos="fade-up" data-aos-delay="50"> <!-- Atrasos ajustados -->
+                    <div class="feature-card">
+                        <!-- IMPORTANTE: Otimize esta imagem para ~180x180px e use formato WebP -->
                         <img src="images/teste%20IPTV%208%20horas.webp" alt="Teste IPTV com tempo generoso para explorar" class="feature-icon" loading="lazy">
                         <h3>Teste Amplo</h3>
                         <p>Aproveite ao máximo seu acesso para explorar nosso catálogo completo de canais, filmes e séries sem pressa.</p>
                     </div>
-                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <!-- IMPORTANTE: Otimize esta imagem para ~180x180px e use formato WebP -->
                         <img src="images/teste%20iptv%206%20horas.webp" alt="Teste IPTV com flexibilidade para sua rotina" class="feature-icon" loading="lazy">
                         <h3>Flexibilidade Total</h3>
                         <p>Nossos testes são pensados para se adaptar à sua rotina, permitindo uma avaliação completa no seu tempo.</p>
                     </div>
-                    <div class="feature-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="feature-card">
+                        <!-- IMPORTANTE: Otimize esta imagem para ~180x180px e use formato WebP -->
                         <img src="images/teste%20iptv%20imediato.webp" alt="Teste IPTV com acesso imediato e rápido" class="feature-icon" loading="lazy">
                         <h3>Acesso Imediato</h3>
                         <p>Solicite e receba seu acesso de forma <strong>rápida e descomplicada</strong>, para começar a usar em minutos.</p>
                     </div>
-                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                         <!-- IMPORTANTE: Otimize esta imagem para ~180x180px e use formato WebP -->
                         <img src="images/teste%20iptv%20via%20email.webp" alt="Teste IPTV entregue de forma conveniente via e-mail ou WhatsApp" class="feature-icon" loading="lazy">
                         <h3>Conveniência Digital</h3>
                         <p>Todas as instruções e dados do seu teste são enviados diretamente para o seu <strong>e-mail</strong> ou <strong>WhatsApp</strong>.</p>
                     </div>
-                    <div class="feature-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="feature-card">
+                         <!-- IMPORTANTE: Otimize esta imagem para ~180x180px e use formato WebP -->
                         <img src="images/teste%20iptv%20xciptv.webp" alt="Teste IPTV com ampla compatibilidade com apps como XCIPTV" class="feature-icon" loading="lazy">
                         <h3>Ampla Compatibilidade</h3>
                         <p>Funciona perfeitamente com apps populares como <strong>XCIPTV</strong> e em diversos dispositivos (Smart TVs, mobile, etc).</p>
                     </div>
-                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card">
+                         <!-- IMPORTANTE: Otimize esta imagem para ~180x180px e use formato WebP -->
                         <img src="images/gerador%20de%20teste%20IPTV.webp" alt="Gerador de Teste IPTV prático e fácil de usar" class="feature-icon" loading="lazy">
                         <h3>Geração Simplificada</h3>
                         <p>Nosso sistema para solicitar o teste é pensado para ser <strong>fácil e intuitivo</strong>, sem dores de cabeça.</p>
@@ -763,33 +778,33 @@
 
         <section class="section section-darker" id="como-funciona">
             <div class="container">
-                <div class="section-title" data-aos="fade-up">
+                <div class="section-title">
                     <h2>Simples, Rápido e <span class="highlight">Sem Complicações</span></h2>
                     <p class="lead">Veja como é fácil começar a sua experiência com o Teste IPTV PRO.</p>
                 </div>
                 <div class="steps-container">
-                    <div class="step-item" data-aos="fade-right">
+                    <div class="step-item">
                         <div class="step-number">1</div>
                         <div class="step-content">
                             <h3>Solicite Seu Teste</h3>
                             <p>Clique no botão "Iniciar Minha Solicitação" abaixo para ser direcionado à nossa página e iniciar seu pedido. O processo é rápido e simples!</p>
                         </div>
                     </div>
-                    <div class="step-item" data-aos="fade-left">
+                    <div class="step-item">
                         <div class="step-number">2</div>
                         <div class="step-content">
                             <h3>Receba os Dados por WhatsApp</h3>
                             <p>Após a solicitação, nossa equipe entrará em contato rapidamente via <strong>WhatsApp</strong> para confirmar os detalhes e enviar todas as instruções e dados de acesso.</p>
                         </div>
                     </div>
-                    <div class="step-item" data-aos="fade-right">
+                    <div class="step-item">
                         <div class="step-number">3</div>
                         <div class="step-content">
                             <h3>Configure e Aproveite</h3>
                             <p>Siga o tutorial simples para configurar em seu dispositivo preferido e comece a assistir imediatamente!</p>
                         </div>
                     </div>
-                     <div class="step-item" data-aos="fade-left">
+                     <div class="step-item">
                         <div class="step-number">4</div>
                         <div class="step-content">
                             <h3>Avalie Sem Pressão</h3>
@@ -797,7 +812,7 @@
                         </div>
                     </div>
                 </div>
-                 <div style="text-align: center;" data-aos="fade-up">
+                 <div style="text-align: center;">
                      <a href="https://teste.iptvprobr.com/" class="btn btn-primary" target="_blank" rel="noopener">Iniciar Minha Solicitação</a>
                  </div>
             </div>
@@ -806,7 +821,7 @@
         <section class="section" id="conteudo-missao">
             <div class="container">
                 <div class="content-image-layout">
-                    <div class="content-text" data-aos="fade-right">
+                    <div class="content-text">
                         <div class="section-title" style="text-align: left; margin-bottom: 1rem;">
                              <h2>O Que Te Espera no <span class="highlight">Nosso Teste?</span></h2>
                         </div>
@@ -814,8 +829,8 @@
                         <p><strong>Nossa Missão:</strong> Democratizar o acesso ao entretenimento de qualidade, permitindo que todos experimentem a tecnologia IPTV de forma transparente, segura e totalmente gratuita, sem pegadinhas ou compromissos futuros.</p>
                         <a href="https://teste.iptvprobr.com/" class="btn btn-secondary" target="_blank" rel="noopener">Explorar Conteúdo Agora</a>
                     </div>
-                    <div class="content-image" data-aos="fade-left" data-aos-delay="150">
-                         <!-- IMPORTANTE: Redimensione esta imagem (para ~600x600px) e use formato WebP -->
+                    <div class="content-image">
+                        <!-- IMPORTANTE: Otimize esta imagem para ~500x500px e use formato WebP -->
                         <img src="images/teste%20IPTV%208%20horas.webp" alt="Variedade de conteúdo no Teste IPTV" loading="lazy">
                     </div>
                 </div>
@@ -824,19 +839,19 @@
 
         <section class="section section-darker" id="depoimentos">
             <div class="container">
-                <div class="section-title" data-aos="fade-up">
+                <div class="section-title">
                     <h2>O Que Nossos <span class="highlight">Usuários Dizem</span></h2>
                 </div>
                 <div class="testimonial-grid">
-                    <div class="testimonial-card" data-aos="zoom-in-up" data-aos-delay="50">
+                    <div class="testimonial-card">
                         <p class="quote">"Com o teste de IPTV do site, consegui assistir a jogos ao vivo e séries que sempre quis, tudo sem travar. Qualidade impressionante!"</p>
                         <p class="author"><strong>— Felipe A.</strong></p>
                     </div>
-                    <div class="testimonial-card" data-aos="zoom-in-up" data-aos-delay="100">
+                    <div class="testimonial-card">
                         <p class="quote">"Gostei muito do acesso IPTV grátis, foi fácil instalar e pude experimentar em vários aparelhos. O suporte também foi muito atencioso."</p>
                         <p class="author"><strong>— Mariana S.</strong></p>
                     </div>
-                    <div class="testimonial-card" data-aos="zoom-in-up" data-aos-delay="150">
+                    <div class="testimonial-card">
                         <p class="quote">"Recomendo para quem nunca usou IPTV. O teste gratuito me ajudou a entender como funciona e a qualidade é ótima. Sem dúvida, a melhor opção para conhecer!"</p>
                         <p class="author"><strong>— Ricardo P.</strong></p>
                     </div>
@@ -846,27 +861,27 @@
 
         <section class="section" id="faq">
             <div class="container">
-                <div class="section-title" data-aos="fade-up">
+                <div class="section-title">
                     <h2>Perguntas <span class="highlight">Frequentes</span></h2>
                 </div>
                 <div class="faq-list">
-                    <details class="faq-item" data-aos="fade-up">
+                    <details class="faq-item">
                         <summary><h3>O que está incluso no teste de IPTV?</h3><span class="faq-icon">+</span></summary>
                         <div class="faq-answer"><p>O teste inclui acesso a uma seleção completa de canais, filmes, séries e conteúdos esportivos para você avaliar todos os recursos e a qualidade da transmissão IPTV.</p></div>
                     </details>
-                    <details class="faq-item" data-aos="fade-up">
+                    <details class="faq-item">
                         <summary><h3>Quanto tempo dura o teste gratuito de IPTV?</h3><span class="faq-icon">+</span></summary>
                         <div class="faq-answer"><p>O período do teste é pensado para que você possa explorar os recursos com calma. O prazo exato é informado no momento do envio do acesso, podendo variar conforme a disponibilidade.</p></div>
                     </details>
-                    <details class="faq-item" data-aos="fade-up">
+                    <details class="faq-item">
                         <summary><h3>Preciso me comprometer com algo após o teste IPTV?</h3><span class="faq-icon">+</span></summary>
                         <div class="faq-answer"><p>Não! Aqui você experimenta sem qualquer tipo de compromisso. O teste é uma excelente oportunidade para você conhecer a tecnologia IPTV e explorar diversas opções de conteúdo antes de tomar qualquer decisão sobre como irá consumir seu entretenimento favorito.</p></div>
                     </details>
-                    <details class="faq-item" data-aos="fade-up">
+                    <details class="faq-item">
                         <summary><h3>Quais dispositivos aceitam o teste de IPTV grátis?</h3><span class="faq-icon">+</span></summary>
                         <div class="faq-answer"><p>Você pode acessar IPTV em Smart TVs (Samsung, LG, etc.), Android TV, Fire Stick, celulares Android ou iPhone, notebooks, computadores e até tablets. Oferecemos suporte para diversos apps, incluindo o XCIPTV.</p></div>
                     </details>
-                     <details class="faq-item" data-aos="fade-up">
+                     <details class="faq-item">
                         <summary><h3>O teste IPTV PRO é seguro?</h3><span class="faq-icon">+</span></summary>
                         <div class="faq-answer"><p>Sim, trabalhamos para garantir que todo processo seja rápido e seguro. Não solicitamos informações sensíveis como dados de cartão e não há riscos de cobrança.</p></div>
                     </details>
@@ -875,7 +890,7 @@
         </section>
 
         <section class="cta-section" id="cta-final">
-            <div class="container" data-aos="zoom-in">
+            <div class="container">
                 <h2>Pronto para Revolucionar Sua Forma de Assistir TV?</h2>
                 <p>Não perca mais tempo! Solicite seu teste IPTV grátis agora mesmo e mergulhe em um universo de entretenimento sem limites. É rápido, fácil e totalmente sem compromisso.</p>
                 <a href="https://teste.iptvprobr.com/" class="btn btn-primary btn-large" target="_blank" rel="noopener">Quero Meu Teste Grátis Agora!</a>
@@ -885,9 +900,9 @@
 
     <footer class="footer">
         <div class="container">
-            <a href="https://iptvprobr.com/" class="footer-brand">IPTVPRO<span class="highlight">BR</span></a> <!-- Link alterado -->
+            <a href="https://iptvprobr.com/" class="footer-brand">IPTVPRO<span class="highlight">BR</span></a>
             <ul class="footer-links">
-                <li><a href="https://iptvprobr.com/">Teste IPTV</a></li> <!-- Item e link adicionados/alterados -->
+                <li><a href="https://iptvprobr.com/">Teste IPTV</a></li>
                 <li><a href="/quem-somos" rel="noopener">Quem Somos</a></li>
                 <li><a href="https://teste.iptvprobr.com/" target="_blank" rel="noopener">Contato</a></li>
                 <li><a href="/politica-de-privacidade" rel="noopener">Política de Privacidade</a></li>
@@ -901,42 +916,39 @@
     </footer>
 
     <a href="https://teste.iptvprobr.com/" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Solicitar Teste IPTV via WhatsApp">
-        <!-- SUGESTÃO: Auto-hospedar este SVG para melhor controle de cache -->
-        <img src="images/whatsapp-icon.svg" alt="WhatsApp" loading="lazy"> <!-- Caminho para imagem local -->
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false">
+            <path d="M16.21.02a16.05 16.05 0 0 0-15.7 16.3c0 3.72 1.27 7.16 3.5 9.94l-3.68 7.35 7.57-3.6a16.05 16.05 0 0 0 8.3 2.33h.02A16.06 16.06 0 0 0 16.2.03Zm7.63 23.26a2.33 2.33 0 0 1-1.63 1c-.4.06-.96.16-2.9-.57a13.38 13.38 0 0 1-7.2-6.6c-1.4-2.43-2.3-5.3-2.3-5.3s-.1-.27.1-.55a2.4 2.4 0 0 1 .6-.9c.27-.24.55-.32.76-.32.2 0 .4.04.58.07.23.04.38.06.55.35.2.3.73 1.74.8 1.87.05.16.08.35.03.53a.9.9 0 0 1-.3.58c-.13.16-.24.27-.38.42-.16.16-.33.35-.47.5-.2.2-.4.44-.18.82.2.32.88 1.48 1.9 2.43a10.6 10.6 0 0 0 3.08 2.33c.35.18.6.16.82-.08.23-.25.5-.62.65-.82s.3-.32.5-.2a3.74 3.74 0 0 1 2.28 1.08c.3.27.45.4.52.58.08.2.07.42-.03.65Z"></path>
+        </svg>
     </a>
     
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" async></script> <!-- Adicionado async -->
+    <!-- AOS (Animate On Scroll) removido para teste de CLS. 
+         Se for reintroduzir, carregar de forma não bloqueadora e usar com cuidado.
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" async defer></script>
     <script>
-        // Executar AOS.init() após o carregamento do script AOS
-        function initAOS() {
-            AOS.init({
-                duration: 600, // Duração mais curta
-                once: true,    
-                offset: 30, 
-                disable: 'mobile' 
-            });
-        }
+        // A inicialização do AOS deve ocorrer após o carregamento completo do script.
+        // window.addEventListener('load', () => { // Ou uma verificação mais robusta
+        //     if (typeof AOS !== 'undefined') {
+        //         AOS.init({
+        //             duration: 500, 
+        //             once: true,    
+        //             offset: 20, 
+        //             disable: 'mobile' 
+        //         });
+        //     }
+        // });
+    </script> -->
 
-        // Verificar se AOS foi carregado antes de iniciar
-        if (typeof AOS !== 'undefined') {
-            initAOS();
-        } else {
-            // Se AOS ainda não carregou, esperar pelo evento de load do script (forma simplificada)
-            const aosScript = document.querySelector('script[src="https://unpkg.com/aos@2.3.1/dist/aos.js"]');
-            if (aosScript) {
-                aosScript.onload = initAOS;
-            }
-        }
-
-
+    <script>
+        // --- Script para Navegação Ativa e Suave ---
         const navLinks = document.querySelectorAll('#main-nav .nav-links a');
         const sections = document.querySelectorAll('main section[id], header#hero[id]');
         const mainNav = document.getElementById('main-nav');
-        const navHeight = mainNav ? mainNav.offsetHeight : 70;
+        const navHeight = mainNav ? mainNav.offsetHeight : 60; // Ajustar se a altura do nav mudar
 
         function changeLinkState() {
             let index = sections.length;
-            const scrollYWithOffset = window.scrollY + navHeight + 50; 
+            // Adicionar um offset maior para ativar o link um pouco antes de a seção atingir o topo
+            const scrollYWithOffset = window.scrollY + navHeight + (window.innerHeight * 0.3); 
 
             while(--index && scrollYWithOffset < sections[index].offsetTop) {}
             
@@ -945,17 +957,17 @@
             const currentSection = sections[index];
             if (currentSection) {
                  const activeLink = document.querySelector(`#main-nav .nav-links a[href="#${currentSection.id}"]`);
-                 // Só ativa se o link for uma âncora interna (começa com #)
                  if (activeLink && activeLink.getAttribute('href').startsWith('#')) {
                     activeLink.classList.add('active');
                  }
             }
         }
         if (sections.length > 0 && navLinks.length > 0) {
-            changeLinkState();
+            changeLinkState(); // Define o estado inicial
             window.addEventListener('scroll', changeLinkState);
         }
         
+        // --- Script para Menu Mobile Hamburger ---
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
         const navUl = document.getElementById('nav-links-menu');
 
@@ -966,6 +978,7 @@
                 navUl.classList.toggle('active');
             });
 
+            // Fechar menu ao clicar em um link de âncora interna
             navLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     if (navUl.classList.contains('active')) {
@@ -973,6 +986,7 @@
                             mobileMenuToggle.setAttribute('aria-expanded', 'false');
                             navUl.classList.remove('active');
                         }
+                        // Se for um link externo (como o "Teste IPTV"), o menu fechará com a navegação da página.
                     }
                 });
             });
