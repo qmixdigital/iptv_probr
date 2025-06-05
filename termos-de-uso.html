@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Uso - IPTV PRO BR</title>
+    <meta name="description" content="Leia os Termos de Uso do site IPTV PRO BR antes de solicitar seu teste de IPTV. Entenda nossos serviços e suas responsabilidades como usuário.">
+    <link rel="canonical" href="https://iptvprobr.com/termos-de-uso">
+    <meta name="robots" content="index,follow"> <!-- Pode ser noindex se preferir não indexar termos -->
+
+    <!-- Meta tags OG e Twitter -->
+    <meta property="og:title" content="Termos de Uso - IPTV PRO BR">
+    <meta property="og:description" content="Conheça as condições para utilizar os serviços de teste de IPTV oferecidos pela IPTV PRO BR.">
+    <meta property="og:url" content="https://iptvprobr.com/termos-de-uso">
+    <!-- <meta property="og:image" content="https://iptvprobr.com/images/og-image-termos.jpg"> -->
+
+    <meta name="twitter:title" content="Termos de Uso - IPTV PRO BR">
+    <meta name="twitter:description" content="Conheça as condições para utilizar os serviços de teste de IPTV oferecidos pela IPTV PRO BR.">
+    <!-- <meta name="twitter:image" content="https://iptvprobr.com/images/twitter-image-termos.jpg"> -->
+
+    <link rel="icon" href="images/teste_iptv_pro_favicon.svg" type="image/svg+xml">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&display=swap">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> <!-- SUBSTITUA SEU ID -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX'); // SUBSTITUA SEU ID
+    </script>
+
+    <style>
+        /* Reutilizando CSS da página de Política de Privacidade */
+        :root {
+            --primary-color: #00AEEF; 
+            --primary-hover: #008BC7;
+            --cta-bg-color: #005C8A; 
+            
+            --background-color: #121212; 
+            --surface-color: #1E1E1E; 
+            --surface-hover: #2a2a2a;
+            --border-color: #383838; 
+
+            --text-color: #E0E0E0;
+            --text-muted: #B8B8B8; 
+            --text-headings: #FFFFFF;
+            --text-on-primary: #FFFFFF; 
+
+            --font-headings: 'Oswald', sans-serif;
+            --font-body: 'Poppins', sans-serif;
+            --font-size-base: 1rem; 
+            --font-size-small: 0.875rem; 
+            --font-size-smaller: 0.75rem;
+
+            --section-padding: 55px 0; 
+            --container-width: 1140px;
+            --border-radius: 10px; 
+            --box-shadow: 0 5px 18px rgba(0, 0, 0, 0.22); 
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 100%; 
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            font-size: var(--font-size-base); 
+            line-height: 1.7; 
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden; 
+        }
+
+        .container {
+            width: 90%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-headings);
+            color: var(--text-headings);
+            line-height: 1.3; 
+            font-weight: 500;
+            letter-spacing: 0.3px; 
+            margin-bottom: 0.7em; 
+        }
+        .page-header h1 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); margin-bottom: 0.2em; } 
+        .content-section h2 { font-size: clamp(1.4rem, 3vw, 2rem); margin-top: 2em; margin-bottom: 0.8em; color: var(--primary-color);} 
+        .content-section h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); margin-top: 1.5em; margin-bottom: 0.6em; color: var(--text-headings); }
+        
+        p { margin-bottom: 1.3em; font-size: var(--font-size-base); color: var(--text-muted); } 
+        p:last-child { margin-bottom: 0; }
+        ul, ol { margin-bottom: 1.3em; padding-left: 25px; }
+        li { margin-bottom: 0.5em; }
+
+        a { color: var(--primary-color); text-decoration: none; transition: color 0.2s ease; } 
+        a:hover { color: var(--primary-hover); text-decoration: underline; }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75em 1.8em; 
+            font-family: var(--font-body);
+            font-weight: 500; 
+            font-size: 0.9rem; 
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 50px; 
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-image 0.2s ease; 
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+        .btn-primary {
+            background-image: linear-gradient(to right, var(--primary-color) 0%, var(--primary-hover) 60%, var(--primary-hover) 100%);
+            background-size: 220% auto; 
+            color: var(--text-on-primary);
+            box-shadow: 0 3px 10px rgba(0, 174, 239, 0.15); 
+        }
+        .btn-primary:hover {
+            background-position: right center;
+            transform: translateY(-1px); 
+            box-shadow: 0 5px 12px rgba(0, 174, 239, 0.22); 
+        }
+
+        /* --- Navbar --- */
+        .navbar {
+            background-color: rgba(18, 18, 18, 0.9); 
+            backdrop-filter: blur(8px); 
+            padding: 0.7rem 0; 
+            position: sticky; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); 
+            border-bottom: 1px solid var(--border-color);
+        }
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-brand {
+            font-family: var(--font-headings);
+            font-size: 1.7rem; 
+            font-weight: 700;
+            color: var(--text-headings);
+        }
+        .navbar-brand .highlight { color: var(--primary-color); }
+        .nav-links { list-style: none; display: flex; }
+        .nav-links li { margin-left: 1.6rem; } 
+        .nav-links a {
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.85rem; 
+            text-transform: uppercase;
+            padding-bottom: 0.4rem; 
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s ease, border-bottom-color 0.2s ease;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+        .mobile-menu-toggle { display: none; }
+
+        .page-header {
+            padding: 50px 0 30px; 
+            text-align: center;
+            background-color: var(--surface-color); 
+            border-bottom: 1px solid var(--border-color);
+        }
+        .page-header h1 {
+            color: var(--primary-color);
+        }
+         .page-header .last-updated {
+            font-size: var(--font-size-small);
+            color: var(--text-muted);
+            margin-top: 0.5em;
+        }
+
+        .section {
+            padding: var(--section-padding);
+        }
+        
+        .content-section {
+            max-width: 800px; 
+            margin: 0 auto;
+        }
+        .content-section p, .content-section ul, .content-section ol {
+            margin-bottom: 1.5em; 
+            line-height: 1.75;
+        }
+        .content-section strong {
+            color: var(--text-headings);
+            font-weight: 600;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            background-color: var(--surface-color);
+            padding: 2.5rem 0 1.2rem; 
+            border-top: 1px solid var(--border-color);
+        }
+        .footer-brand {
+            font-family: var(--font-headings);
+            font-size: 1.7rem; 
+            font-weight: 700;
+            color: var(--text-headings);
+            margin-bottom: 0.4em; 
+            text-align: center; 
+        }
+        .footer-brand .highlight { color: var(--primary-color); }
+        .footer-links { list-style: none; display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;} 
+        .footer-links a { color: var(--text-muted); font-size: var(--font-size-small); } 
+        .footer-links a:hover { color: var(--primary-color); }
+        .footer-copyright { font-size: var(--font-size-smaller); color: #999; text-align: center; } 
+        .footer-copyright .legal-disclaimer { font-size: calc(var(--font-size-smaller) - 0.05rem); color: #888; margin-top: 0.4rem; } 
+
+        /* --- WhatsApp Float --- */
+        .whatsapp-float {
+            position: fixed;
+            width: 48px; height: 48px; 
+            bottom: 15px; right: 15px; 
+            background-color: #25D366; 
+            color: #FFFFFF;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2); 
+            z-index: 100;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        .whatsapp-float:hover { transform: scale(1.05); background-color: #1DAE50; } 
+        .whatsapp-float svg { width: 24px; height: 24px; fill: #FFFFFF; } 
+
+
+        /* --- Responsive --- */
+        body {
+            --font-size-base: 0.9375rem; 
+             --font-size-small: 0.8125rem; 
+             --font-size-smaller: 0.75rem; 
+        }
+        .page-header .last-updated { font-size: var(--font-size-smaller); }
+
+
+        @media (min-width: 769px) { 
+            body {
+                --font-size-base: 1rem; 
+                --font-size-small: 0.875rem; 
+                --font-size-smaller: 0.75rem; 
+            }
+            .page-header .last-updated { font-size: var(--font-size-small); }
+        }
+
+
+        @media (max-width: 768px) { 
+            .navbar-container { position: relative; }
+            .mobile-menu-toggle {
+                display: block;
+                background: none; border: none; cursor: pointer;
+                padding: 0.5rem;
+                z-index: 1001; 
+            }
+            .mobile-menu-toggle .bar {
+                display: block; width: 25px; height: 3px;
+                margin: 5px auto; background-color: var(--text-headings);
+                transition: all 0.3s ease-in-out;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%; left: 0;
+                width: 100%;
+                background-color: var(--surface-color);
+                padding: 0.6rem 0; 
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                border-top: 1px solid var(--border-color);
+            }
+            .nav-links.active { display: flex; }
+            .nav-links li { margin: 0.5rem 0; text-align: center; width: 100%; } 
+            .nav-links a { display: block; padding: 0.6rem 1rem; border-bottom: none; } 
+            .nav-links a:hover, .nav-links a.active { background-color: rgba(0, 174, 239, 0.08); color: var(--primary-color); } 
+            
+            .page-header { padding: 30px 0 20px; }
+            .page-header h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); }
+            .content-section h2 { font-size: clamp(1.3rem, 3vw, 1.8rem); } 
+            .content-section h3 { font-size: clamp(1.1rem, 2.5vw, 1.4rem); }
+
+            .footer { text-align: left; padding: 1.8rem 15px 0.8rem; } 
+            .footer-brand, .footer-copyright, .footer-copyright .legal-disclaimer { text-align: left; }
+            .footer-links { justify-content: flex-start; flex-direction: column; align-items: flex-start; gap: 0.4rem; } 
+            .footer-links li { margin-left: 0; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" id="main-nav">
+        <div class="container navbar-container">
+            <a href="https://iptvprobr.com/" class="navbar-brand">IPTVPRO<span class="highlight">BR</span></a>
+            <button class="mobile-menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links-menu">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links-menu">
+                <li><a href="https://iptvprobr.com/">Teste IPTV</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="politica-de-privacidade.html">Privacidade</a></li>
+                <li><a href="termos-de-uso.html" class="active">Termos</a></li> <!-- Link ativo -->
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Termos de Uso</h1>
+            <p class="last-updated">Última atualização: 06 de Junho de 2025</p> <!-- Data fictícia -->
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container content-section">
+                <h2>1. Introdução e Aceitação dos Termos</h2>
+                <p>Bem-vindo ao IPTV PRO BR ("nós", "nosso", "Site"). Estes Termos de Uso ("Termos") regem o seu acesso e uso do nosso site localizado em <a href="https://iptvprobr.com/">https://iptvprobr.com/</a> e todos os serviços relacionados à solicitação e recebimento de testes gratuitos de IPTV ("Serviços").</p>
+                <p>Ao acessar ou usar nosso Site e Serviços, você concorda em cumprir e estar vinculado a estes Termos. Se você não concordar com qualquer parte dos Termos, não poderá acessar o Serviço. Recomendamos que você leia estes Termos cuidadosamente.</p>
+
+                <h2>2. Objeto do Serviço</h2>
+                <p>O IPTV PRO BR atua como um facilitador, conectando usuários interessados a diversas plataformas que oferecem serviços de IPTV. Nosso principal objetivo é fornecer a oportunidade para os usuários realizarem os <a href="https://iptvprobr.com/">melhores teste de IPTV</a> de diferentes provedores, permitindo uma avaliação informada antes de qualquer decisão de contratação direta com as referidas plataformas.</p>
+                <p><strong>Importante:</strong> O IPTV PRO BR não possui, opera, controla ou vende diretamente quaisquer serviços de transmissão de IPTV, listas de canais ou planos de assinatura. Nossa função é estritamente de intermediação para a realização de testes gratuitos disponibilizados por nossos parceiros.</p>
+
+                <h2>3. Elegibilidade</h2>
+                <p>Para utilizar nossos Serviços, você deve ter pelo menos 18 anos de idade ou a maioridade legal em sua jurisdição, e possuir capacidade legal para celebrar acordos vinculativos. Ao usar o Site, você declara e garante que atende a esses requisitos.</p>
+
+                <h2>4. Solicitação e Uso do Teste de IPTV</h2>
+                <p>Ao solicitar um teste de IPTV através do nosso Site:</p>
+                <ul>
+                    <li>Você concorda em fornecer informações verdadeiras, precisas, atuais e completas conforme solicitado no processo de cadastro para o teste.</li>
+                    <li>Você compreende que o teste é oferecido gratuitamente, por um período limitado (conforme informado no momento da solicitação), e destina-se exclusivamente à avaliação pessoal da qualidade e do conteúdo da plataforma de IPTV em questão.</li>
+                    <li>É estritamente proibido revender, redistribuir, compartilhar excessivamente (além do uso pessoal e individual) ou utilizar o acesso do teste para fins comerciais ou ilegais.</li>
+                    <li>A disponibilidade de testes para plataformas específicas pode variar e está sujeita à capacidade e políticas de nossos parceiros.</li>
+                    <li>Reservamo-nos o direito de recusar ou cancelar uma solicitação de teste a nosso critério, especialmente em casos de suspeita de fraude ou violação destes Termos.</li>
+                </ul>
+
+                <h2>5. Responsabilidades do Usuário</h2>
+                <p>Como usuário do IPTV PRO BR, você concorda em:</p>
+                <ul>
+                    <li>Utilizar o Site e os testes de IPTV apenas para fins lícitos e de acordo com estes Termos.</li>
+                    <li>Não se envolver em qualquer atividade que possa danificar, desabilitar, sobrecarregar ou prejudicar o Site ou interferir no uso e aproveitamento do Site por outros usuários.</li>
+                    <li>Não tentar obter acesso não autorizado a quaisquer sistemas, redes ou contas associadas ao IPTV PRO BR.</li>
+                    <li>Ser responsável por manter a confidencialidade das informações de acesso ao teste fornecidas e por todas as atividades que ocorrerem sob seu acesso.</li>
+                    <li>Garantir que possui uma conexão de internet estável e dispositivos compatíveis para a utilização adequada do teste de IPTV.</li>
+                </ul>
+
+                <h2>6. Propriedade Intelectual</h2>
+                <p>Todo o conteúdo presente no Site IPTV PRO BR, incluindo, mas não se limitando a, textos, gráficos, logotipos, ícones, imagens, design e software, é propriedade exclusiva do IPTV PRO BR ou de seus licenciadores e é protegido pelas leis de direitos autorais e outras leis de propriedade intelectual.</p>
+                <p>O conteúdo das transmissões de IPTV acessado durante o período de teste é de propriedade e responsabilidade das respectivas plataformas de IPTV e seus provedores de conteúdo.</p>
+
+                <h2>7. Links para Sites de Terceiros</h2>
+                <p>Nosso Site pode conter links para sites de terceiros, incluindo as plataformas de IPTV para as quais fornecemos testes. Esses links são fornecidos apenas para sua conveniência. O IPTV PRO BR não tem controle sobre o conteúdo, políticas de privacidade ou práticas de sites de terceiros e não assume qualquer responsabilidade por eles. Aconselhamos que você leia os termos e políticas de qualquer site de terceiros que visitar.</p>
+
+                <h2>8. Limitação de Responsabilidade</h2>
+                <p>O Site e os Serviços de teste de IPTV são fornecidos "COMO ESTÃO" e "CONFORME DISPONÍVEL", sem quaisquer garantias expressas ou implícitas. Não garantimos que o Site estará livre de erros ou interrupções, ou que os testes de IPTV funcionarão perfeitamente em todos os dispositivos ou conexões.</p>
+                <p>O IPTV PRO BR atua como um intermediário para testes. Não somos responsáveis pela qualidade, legalidade, disponibilidade ou qualquer outro aspecto dos serviços de IPTV fornecidos pelas plataformas parceiras após o período de teste. Qualquer decisão de contratar um serviço de IPTV de um terceiro é de sua exclusiva responsabilidade.</p>
+                <p>Na extensão máxima permitida pela lei aplicável, o IPTV PRO BR, seus diretores, funcionários, parceiros e afiliados não serão responsáveis por quaisquer danos indiretos, incidentais, especiais, consequenciais ou punitivos, incluindo, sem limitação, perda de lucros, dados, uso, boa vontade ou outras perdas intangíveis, resultantes de (i) seu acesso ou uso ou incapacidade de acessar ou usar o Serviço; (ii) qualquer conduta ou conteúdo de terceiros no Serviço; (iii) qualquer conteúdo obtido do Serviço; e (iv) acesso não autorizado, uso ou alteração de suas transmissões ou conteúdo, seja com base em garantia, contrato, ato ilícito (incluindo negligência) ou qualquer outra teoria legal, tenhamos ou não sido informados da possibilidade de tais danos.</p>
+
+                <h2>9. Indenização</h2>
+                <p>Você concorda em defender, indenizar e isentar o IPTV PRO BR e seus licenciados e licenciadores, e seus funcionários, contratados, agentes, diretores e executivos, de e contra todas e quaisquer reivindicações, danos, obrigações, perdas, responsabilidades, custos ou dívidas, e despesas (incluindo, mas não se limitando a honorários advocatícios), resultantes de ou decorrentes de a) seu uso e acesso ao Serviço, ou b) uma violação destes Termos.</p>
+
+                <h2>10. Modificações nos Termos</h2>
+                <p>Reservamo-nos o direito, a nosso exclusivo critério, de modificar ou substituir estes Termos a qualquer momento. Se uma revisão for material, tentaremos fornecer um aviso com pelo menos 30 dias de antecedência antes que quaisquer novos termos entrem em vigor, publicando os termos atualizados no Site. O que constitui uma alteração material será determinado a nosso exclusivo critério.</p>
+                <p>Ao continuar a acessar ou usar nosso Serviço após essas revisões entrarem em vigor, você concorda em ficar vinculado aos termos revisados. Se você não concordar com os novos termos, por favor, pare de usar o Serviço.</p>
+
+                <h2>11. Rescisão ou Suspensão</h2>
+                <p>Podemos rescindir ou suspender seu acesso ao nosso Serviço (incluindo o acesso ao teste de IPTV) imediatamente, sem aviso prévio ou responsabilidade, por qualquer motivo, incluindo, sem limitação, se você violar os Termos.</p>
+                <p>Todas as disposições dos Termos que, por sua natureza, devam sobreviver à rescisão, sobreviverão à rescisão, incluindo, sem limitação, disposições de propriedade, isenções de garantia, indenização e limitações de responsabilidade.</p>
+
+                <h2>12. Lei Aplicável e Foro</h2>
+                <p>Estes Termos serão regidos e interpretados de acordo com as leis do Brasil, sem consideração a seus conflitos de disposições legais.</p>
+                <p>Qualquer disputa decorrente ou relacionada a estes Termos ou ao uso do Serviço será submetida à jurisdição exclusiva dos tribunais localizados no Rio de Janeiro, RJ, Brasil.</p>
+
+                <h2>13. Disposições Gerais</h2>
+                <p>Estes Termos constituem o acordo integral entre nós em relação ao nosso Serviço e substituem e anulam quaisquer acordos anteriores que possamos ter tido entre nós em relação ao Serviço.</p>
+                <p>Nossa falha em aplicar qualquer direito ou disposição destes Termos não será considerada uma renúncia a esses direitos. Se qualquer disposição destes Termos for considerada inválida ou inexequível por um tribunal, as demais disposições destes Termos permanecerão em vigor.</p>
+                
+                <h2>14. Contato</h2>
+                <p>Se você tiver alguma dúvida sobre estes Termos de Uso, entre em contato conosco através da nossa página de contato.</p>
+                <div style="margin-top: 1.5em;"> 
+                    <a href="https://teste.iptvprobr.com/" class="btn btn-primary" target="_blank" rel="noopener">Acessar Página de Contato</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <a href="https://iptvprobr.com/" class="footer-brand">IPTVPRO<span class="highlight">BR</span></a>
+            <ul class="footer-links">
+                <li><a href="https://iptvprobr.com/">Teste IPTV</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="https://teste.iptvprobr.com/" target="_blank" rel="noopener">Contato</a></li>
+                <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+                <li><a href="termos-de-uso.html">Termos de Uso</a></li>
+            </ul>
+            <div class="footer-copyright">
+                <p>© 2025 IPTV PRO BR. Todos os direitos reservados.</p>
+                <p class="legal-disclaimer">Este site oferece um teste gratuito para demonstração da tecnologia IPTV. É uma ótima forma de explorar o que o IPTV pode oferecer.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://teste.iptvprobr.com/" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Solicitar Teste IPTV via WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false">
+            <path d="M16.21.02a16.05 16.05 0 0 0-15.7 16.3c0 3.72 1.27 7.16 3.5 9.94l-3.68 7.35 7.57-3.6a16.05 16.05 0 0 0 8.3 2.33h.02A16.06 16.06 0 0 0 16.2.03Zm7.63 23.26a2.33 2.33 0 0 1-1.63 1c-.4.06-.96.16-2.9-.57a13.38 13.38 0 0 1-7.2-6.6c-1.4-2.43-2.3-5.3-2.3-5.3s-.1-.27.1-.55a2.4 2.4 0 0 1 .6-.9c.27-.24.55-.32.76-.32.2 0 .4.04.58.07.23.04.38.06.55.35.2.3.73 1.74.8 1.87.05.16.08.35.03.53a.9.9 0 0 1-.3.58c-.13.16-.24.27-.38.42-.16.16-.33.35-.47.5-.2.2-.4.44-.18.82.2.32.88 1.48 1.9 2.43a10.6 10.6 0 0 0 3.08 2.33c.35.18.6.16.82-.08.23-.25.5-.62.65-.82s.3-.32.5-.2a3.74 3.74 0 0 1 2.28 1.08c.3.27.45.4.52.58.08.2.07.42-.03.65Z"></path>
+        </svg>
+    </a>
+    
+    <script>
+        // --- Script para Menu Mobile Hamburger --- (Idêntico ao anterior)
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navUl = document.getElementById('nav-links-menu');
+
+        if (mobileMenuToggle && navUl) {
+            mobileMenuToggle.addEventListener('click', () => {
+                const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true' || false;
+                mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
+                navUl.classList.toggle('active');
+            });
+
+            document.querySelectorAll('#main-nav .nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navUl.classList.contains('active')) {
+                        if (link.getAttribute('href').startsWith('#') || (link.getAttribute('href').includes(window.location.pathname) && link.getAttribute('href').includes('#')) ) {
+                           mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                           navUl.classList.remove('active');
+                        }
+                    }
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>
