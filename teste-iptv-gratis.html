@@ -1,384 +1,264 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experimente o Melhor Teste IPTV Grátis | Qualidade e Variedade na IPTVPROBR</title>
-    <meta name="description" content="Descubra a liberdade do entretenimento com nosso Teste IPTV grátis. Qualidade superior, vasta seleção de conteúdo e suporte dedicado. Peça seu acesso agora!">
-    <meta name="keywords" content="teste iptv grátis, iptv gratuito, avaliação iptv, iptv de qualidade, como testar iptv">
-    <link rel="canonical" href="https://iptvprobr.com/teste-iptv-gratis">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #1f2833 0%, #2c3e50 100%); /* Novo degradê mais profundo */
-            color: #e0e0e0; /* Cor de texto principal levemente ajustada */
-            line-height: 1.7;
-        }
-        .navbar {
-            background-color: rgba(10, 10, 10, 0.8) !important;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-        .navbar-brand, .nav-link {
-            color: #ffffff !important;
-            font-weight: 500;
-        }
-        .nav-link:hover {
-            color: #5cb85c !important; /* Verde mais vibrante para hover */
-        }
-        .hero-section {
-            background: linear-gradient(rgba(15, 20, 25, 0.88), rgba(25, 35, 45, 0.88)), url('https://via.placeholder.com/1920x600.png?text=Fundo+Moderno+IPTV') no-repeat center center;
-            background-size: cover;
-            color: #fff;
-            padding: 120px 0;
-            text-align: center;
-        }
-        .hero-section h1 {
-            font-size: 3.2rem;
-            font-weight: 700;
-            margin-bottom: 25px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-        }
-        .hero-section p {
-            font-size: 1.3rem;
-            margin-bottom: 35px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .btn-custom {
-            background-color: #5cb85c;
-            border-color: #5cb85c;
-            color: #fff;
-            padding: 14px 35px;
-            font-size: 1.15rem;
-            font-weight: bold;
-            border-radius: 30px;
-            transition: all 0.3s ease-in-out;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .btn-custom:hover {
-            background-color: #4a9d4a;
-            border-color: #4a9d4a;
-            color: #fff;
-            transform: translateY(-3px) scale(1.03);
-            box-shadow: 0 5px 10px rgba(0,0,0,0.25);
-        }
-        .section {
-            padding: 70px 0;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-            font-size: 2.8rem;
-            font-weight: 600;
-            position: relative;
-            padding-bottom: 20px;
-            color: #ffffff; /* Título da seção em branco para destaque */
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 5px;
-            background-color: #5cb85c;
-            border-radius: 3px;
-        }
+<nav class="navbar" id="main-nav">
+    <div class="container navbar-container">
+        <a href="https://iptvprobr.com/" class="navbar-brand">IPTVPRO<span class="highlight">BR</span></a>
+        <button class="mobile-menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links-menu">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <ul class="nav-links" id="nav-links-menu">
+            <li><a href="https://iptvprobr.com/">Teste IPTV</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="#como-funciona">Como Funciona</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </div>
+</nav>
 
-        /* Estilos para a seção "Diferenciais do Nosso Teste IPTV" */
-        .why-choose-us .item {
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.03); /* Fundo sutil para os cards */
-            padding: 35px 25px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .why-choose-us .item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-        }
-        .why-choose-us .item .image-container { /* Novo container para a imagem */
-            width: 200px;  /* Largura do container quadrado */
-            height: 200px; /* Altura do container quadrado */
-            margin-bottom: 25px; /* Espaço abaixo do container da imagem */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            /* background-color: rgba(255,255,255,0.05); /* Opcional: fundo para o container da imagem */
-            /* border: 1px solid #5cb85c; /* Opcional: borda para o container */
-        }
-        .why-choose-us .item img {
-            max-width: 100%; /* Imagem se ajusta à largura do container */
-            max-height: 100%; /* Imagem se ajusta à altura do container */
-            object-fit: contain; /* Garante que a imagem apareça em sua totalidade, sem cortes */
-            border-radius: 0 !important; /* Garante que não haja arredondamento na imagem em si */
-        }
-        .why-choose-us .item h3 {
-            font-size: 1.6rem;
-            color: #5cb85c; /* Cor do título do item */
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        .why-choose-us .item p {
-            font-size: 1rem;
-            color: #b0b0b0; /* Cor do texto do item mais suave */
-        }
+<header class="hero" id="hero">
+    <div class="hero-content">
+        <h1>Teste IPTV Grátis Agora: <span class="highlight">Conheça o Futuro da TV!</span></h1>
+        <p class="subtitle">Qualidade, variedade e acesso imediato sem burocracia. Experimente o melhor do entretenimento digital sem precisar de cartão ou qualquer compromisso.</p>
+        <div class="btn-group">
+            <a href="https://teste.iptvprobr.com/" class="btn btn-primary" target="_blank" rel="noopener">Quero Meu Teste Grátis!</a>
+            <a href="#diferenciais" class="btn btn-secondary">Ver Diferenciais</a>
+        </div>
+    </div>
+</header>
 
-        .features-section .feature-item {
-            text-align: center;
-            padding: 25px;
-            background-color: rgba(255, 255, 255, 0.02);
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .features-section .feature-item i {
-            font-size: 3.5rem;
-            color: #5cb85c;
-            margin-bottom: 25px;
-        }
-        .features-section .feature-item h4 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            font-weight: 500;
-            color: #f0f0f0;
-        }
-        .features-section .feature-item p {
-            color: #b0b0b0;
-        }
-
-        .cta-section {
-            background-color: #5cb85c;
-            color: #fff;
-            padding: 70px 0;
-            text-align: center;
-        }
-        .cta-section h2 {
-            font-size: 2.8rem;
-            margin-bottom: 25px;
-            font-weight: 700;
-        }
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 35px;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .btn-cta {
-            background-color: #fff;
-            border-color: #fff;
-            color: #5cb85c;
-            padding: 14px 35px;
-            font-size: 1.15rem;
-            font-weight: bold;
-            border-radius: 30px;
-            transition: all 0.3s ease-in-out;
-            text-transform: uppercase;
-        }
-        .btn-cta:hover {
-            background-color: #f0f0f0;
-            border-color: #f0f0f0;
-            color: #4a9d4a;
-            transform: scale(1.05) translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-
-        .footer {
-            background-color: #12181f; /* Rodapé ainda mais escuro */
-            color: #909090;
-            padding: 50px 0;
-            text-align: center;
-        }
-        .footer p {
-            margin-bottom: 8px;
-        }
-        .footer a {
-            color: #5cb85c;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            color: #ffffff;
-            text-decoration: underline;
-        }
-        .footer .social-icons a {
-            color: #909090;
-            margin: 0 12px;
-            font-size: 1.6rem;
-            transition: color 0.3s ease;
-        }
-        .footer .social-icons a:hover {
-            color: #5cb85c;
-        }
-
-        @media (max-width: 768px) {
-            .hero-section h1 {
-                font-size: 2.5rem;
-            }
-            .hero-section p {
-                font-size: 1.1rem;
-            }
-            .section-title {
-                font-size: 2.2rem;
-            }
-            .why-choose-us .item .image-container {
-                width: 160px;
-                height: 160px;
-            }
-            .why-choose-us .item h3 {
-                font-size: 1.4rem;
-            }
-            .why-choose-us .item p {
-                font-size: 0.95rem;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<main>
+    <section class="section" id="diferenciais">
         <div class="container">
-            <a class="navbar-brand" href="#">IPTVPROBR</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Página Inicial</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#why-choose-us">Nossos Diferenciais</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#features">Vantagens</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#cta">Pedir Teste IPTV Grátis</a>
-                    </li>
-                </ul>
+            <div class="section-title">
+                <h2>Por Que Escolher Nosso <span class="highlight">Teste IPTV?</span></h2>
+                <p class="lead">Oferecemos uma experiência completa para você avaliar o serviço com tranquilidade e todos os recursos à sua disposição.</p>
             </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <h1>Seu Acesso Imediato ao Melhor Teste IPTV Grátis Está Aqui!</h1>
-            <p>Descubra uma nova era de entretenimento digital. Com nosso <strong>Teste IPTV Grátis</strong>, você vivencia streaming de alta performance, estabilidade e uma coleção impressionante de conteúdo.</p>
-            <a href="#cta" class="btn btn-custom">Quero Meu Teste Gratuito Agora!</a>
-        </div>
-    </section>
-
-    <!-- Diferenciais do Nosso Teste IPTV (Anterior: Por Que Escolher) -->
-    <section id="why-choose-us" class="section why-choose-us">
-        <div class="container">
-            <h2 class="section-title">Diferenciais do Nosso Teste IPTV Grátis</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="item">
-                        <div class="image-container">
-                            <img src="https://cdn-icons-png.flaticon.com/128/2920/2920325.png" alt="Qualidade de Imagem Superior no Teste IPTV Grátis">
-                        </div>
-                        <h3>Definição Impecável</h3>
-                        <p>Nosso <strong>teste IPTV grátis</strong> entrega uma qualidade visual e sonora que transforma sua maneira de assistir TV. Aproveite transmissões nítidas e fluidas, sem travamentos.</p>
-                    </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="images/teste%20IPTV%208%20horas.webp" alt="Teste IPTV com tempo generoso para explorar" class="feature-icon" loading="lazy">
+                    <h3>Teste Amplo</h3>
+                    <p>Aproveite ao máximo seu acesso para explorar nosso catálogo completo de canais, filmes e séries sem pressa.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="item">
-                        <div class="image-container">
-                            <img src="https://cdn-icons-png.flaticon.com/128/3063/3063236.png" alt="Suporte Ágil para seu Teste IPTV">
-                        </div>
-                        <h3>Suporte Atencioso e Rápido</h3>
-                        <p>Ao solicitar seu <strong>teste IPTV grátis</strong>, tenha a tranquilidade de um suporte técnico sempre disponível para esclarecer dúvidas e otimizar sua experiência conosco.</p>
-                    </div>
+                <div class="feature-card">
+                    <img src="images/teste%20iptv%206%20horas.webp" alt="Teste IPTV com flexibilidade para sua rotina" class="feature-icon" loading="lazy">
+                    <h3>Flexibilidade Total</h3>
+                    <p>Nossos testes são pensados para se adaptar à sua rotina, permitindo uma avaliação completa no seu tempo.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="item">
-                        <div class="image-container">
-                             <img src="https://cdn-icons-png.flaticon.com/128/1055/1055657.png" alt="Configuração Descomplicada do Teste IPTV">
-                        </div>
-                        <h3>Ativação Simples e Rápida</h3>
-                        <p>Iniciar seu <strong>teste IPTV grátis</strong> é um processo direto e intuitivo. Em poucos passos, acesse um universo de entretenimento em seus dispositivos prediletos.</p>
-                    </div>
+                <div class="feature-card">
+                    <img src="images/teste%20iptv%20imediato.webp" alt="Teste IPTV com acesso imediato e rápido" class="feature-icon" loading="lazy">
+                    <h3>Acesso Imediato</h3>
+                    <p>Solicite e receba seu acesso de forma <strong>rápida e descomplicada</strong>, para começar a usar em minutos.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/teste%20iptv%20via%20email.webp" alt="Teste IPTV entregue de forma conveniente via e-mail ou WhatsApp" class="feature-icon" loading="lazy">
+                    <h3>Conveniência Digital</h3>
+                    <p>Todas as instruções e dados do seu teste são enviados diretamente para o seu <strong>e-mail</strong> ou <strong>WhatsApp</strong>.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/teste%20iptv%20xciptv.webp" alt="Teste IPTV com ampla compatibilidade com apps como XCIPTV" class="feature-icon" loading="lazy">
+                    <h3>Ampla Compatibilidade</h3>
+                    <p>Funciona perfeitamente com apps populares como <strong>XCIPTV</strong> e em diversos dispositivos (Smart TVs, mobile, etc).</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/gerador%20de%20teste%20IPTV.webp" alt="Gerador de Teste IPTV prático e fácil de usar" class="feature-icon" loading="lazy">
+                    <h3>Geração Simplificada</h3>
+                    <p>Nosso sistema para solicitar o teste é pensado para ser <strong>fácil e intuitivo</strong>, sem dores de cabeça.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Vantagens (Anterior: Recursos) -->
-    <section id="features" class="section features-section">
+    <section class="section section-darker" id="como-funciona">
         <div class="container">
-            <h2 class="section-title">Vantagens Exclusivas do Nosso Teste IPTV</h2>
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-item">
-                        <i class="fas fa-satellite-dish"></i>
-                        <h4>Grade de Canais Completa</h4>
-                        <p>Explore uma vasta gama de canais ao vivo, cobrindo esportes, filmes, notícias e entretenimento infantil com seu <strong>teste IPTV grátis</strong>.</p>
+            <div class="section-title">
+                <h2>Simples, Rápido e <span class="highlight">Sem Complicações</span></h2>
+                <p class="lead">Veja como é fácil começar a sua experiência com o Teste IPTV PRO.</p>
+            </div>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Solicite Seu Teste</h3>
+                        <p>Clique no botão "Iniciar Minha Solicitação" abaixo para ser direcionado à nossa página e iniciar seu pedido. O processo é rápido e simples!</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-item">
-                        <i class="fas fa-play-circle"></i>
-                        <h4>Conteúdo On-Demand Atualizado</h4>
-                        <p>Mergulhe em nossa biblioteca VOD (Vídeo Sob Demanda), sempre com novidades e os maiores sucessos do cinema e das séries.</p>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Receba os Dados por WhatsApp</h3>
+                        <p>Após a solicitação, nossa equipe entrará em contato rapidamente via <strong>WhatsApp</strong> para confirmar os detalhes e enviar todas as instruções e dados de acesso.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-item">
-                        <i class="fas fa-laptop-house"></i>
-                        <h4>Flexibilidade Total de Acesso</h4>
-                        <p>Assista em qualquer lugar! Nosso sistema é compatível com Smart TVs, celulares, tablets, TV Box e PCs.</p>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Configure e Aproveite</h3>
+                        <p>Siga o tutorial simples para configurar em seu dispositivo preferido e comece a assistir imediatamente!</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-item">
-                        <i class="fas fa-tachometer-alt"></i>
-                        <h4>Desempenho Insuperável</h4>
-                        <p>Desfrute de uma transmissão estável e de alta velocidade, assegurando que seu lazer não sofra interrupções. Valide com nosso <strong>teste IPTV grátis</strong>.</p>
+                 <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Avalie Sem Pressão</h3>
+                        <p>Use seu teste grátis para explorar todo o conteúdo. Vai conhecer diversas plataformas de filmes e programas de TV, ajudando você a descobrir o que mais gosta no universo do IPTV.</p>
                     </div>
+                </div>
+            </div>
+             <div style="text-align: center;">
+                 <a href="https://teste.iptvprobr.com/" class="btn btn-primary" target="_blank" rel="noopener">Iniciar Minha Solicitação</a>
+             </div>
+        </div>
+    </section>
+    
+    <section class="section" id="conteudo-missao">
+        <div class="container">
+            <div class="content-image-layout">
+                <div class="content-text">
+                    <div class="section-title" style="text-align: left; margin-bottom: 1rem;">
+                         <h2>O Que Te Espera no <span class="highlight">Nosso Teste?</span></h2>
+                    </div>
+                    <p>Ao solicitar seu teste IPTV gratuito, você terá acesso a uma vasta gama de entretenimento. Prepare-se para canais ao vivo de esportes, filmes recém-lançados, séries aclamadas, programação infantil, notícias, documentários e muito mais. Tudo isso com alta qualidade de imagem e som, para você sentir a diferença.</p>
+                    <p><strong>Nossa Missão:</strong> Democratizar o acesso ao entretenimento de qualidade, permitindo que todos experimentem a tecnologia IPTV de forma transparente, segura e totalmente gratuita, sem pegadinhas ou compromissos futuros.</p>
+                    <a href="https://teste.iptvprobr.com/" class="btn btn-secondary" target="_blank" rel="noopener">Explorar Conteúdo Agora</a>
+                </div>
+                <div class="content-image">
+                    <img src="images/teste%20IPTV%208%20horas.webp" alt="Variedade de conteúdo no Teste IPTV" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Chamada para Ação (CTA) -->
-    <section id="cta" class="cta-section">
+    <section class="section section-darker" id="depoimentos">
         <div class="container">
-            <h2>Pronto Para Uma Nova Dimensão em TV?</h2>
-            <p>Não espere mais! Clique abaixo, requisite seu <strong>Teste IPTV Grátis</strong> e abra as portas para o entretenimento digital premium, sem qualquer custo ou obrigação inicial.</p>
-            <a href="https://api.whatsapp.com/send?phone=SEUNUMEROWHATSAPP&text=Ol%C3%A1%2C%20quero%20ativar%20meu%20Teste%20IPTV%20Gr%C3%A1tis%20agora%21" class="btn btn-cta" target="_blank">Reivindicar Meu Teste IPTV Grátis Agora!</a>
+            <div class="section-title">
+                <h2>O Que Nossos <span class="highlight">Usuários Dizem</span></h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="quote">"Com o teste de IPTV do site, consegui assistir a jogos ao vivo e séries que sempre quis, tudo sem travar. Qualidade impressionante!"</p>
+                    <p class="author"><strong>— Felipe A.</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"Gostei muito do acesso IPTV grátis, foi fácil instalar e pude experimentar em vários aparelhos. O suporte também foi muito atencioso."</p>
+                    <p class="author"><strong>— Mariana S.</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"Recomendo para quem nunca usou IPTV. O teste gratuito me ajudou a entender como funciona e a qualidade é ótima. Sem dúvida, a melhor opção para conhecer!"</p>
+                    <p class="author"><strong>— Ricardo P.</strong></p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Rodapé -->
-    <footer class="footer">
+    <section class="section" id="faq">
         <div class="container">
-            <div class="social-icons mb-3">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <div class="section-title">
+                <h2>Perguntas <span class="highlight">Frequentes</span></h2>
             </div>
-            <p>© 2024 IPTVPROBR. Todos os direitos reservados.</p>
-            <p>Explore o futuro da televisão com um <strong>Teste IPTV Grátis</strong> de alta qualidade.</p>
-            <p>Fale Conosco: <a href="mailto:suporte@iptvprobr.com">suporte@iptvprobr.com</a></p>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary><h3>O que está incluso no teste de IPTV?</h3><span class="faq-icon">+</span></summary>
+                    <div class="faq-answer"><p>O teste inclui acesso a uma seleção completa de canais, filmes, séries e conteúdos esportivos para você avaliar todos os recursos e a qualidade da transmissão IPTV.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><h3>Quanto tempo dura o teste gratuito de IPTV?</h3><span class="faq-icon">+</span></summary>
+                    <div class="faq-answer"><p>O período do teste é pensado para que você possa explorar os recursos com calma. O prazo exato é informado no momento do envio do acesso, podendo variar conforme a disponibilidade.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><h3>Preciso me comprometer com algo após o teste IPTV?</h3><span class="faq-icon">+</span></summary>
+                    <div class="faq-answer"><p>Não! Aqui você experimenta sem qualquer tipo de compromisso. O teste é uma excelente oportunidade para você conhecer a tecnologia IPTV e explorar diversas opções de conteúdo antes de tomar qualquer decisão sobre como irá consumir seu entretenimento favorito.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><h3>Quais dispositivos aceitam o teste de IPTV grátis?</h3><span class="faq-icon">+</span></summary>
+                    <div class="faq-answer"><p>Você pode acessar IPTV em Smart TVs (Samsung, LG, etc.), Android TV, Fire Stick, celulares Android ou iPhone, notebooks, computadores e até tablets. Oferecemos suporte para diversos apps, incluindo o XCIPTV.</p></div>
+                </details>
+                 <details class="faq-item">
+                    <summary><h3>O teste IPTV PRO é seguro?</h3><span class="faq-icon">+</span></summary>
+                    <div class="faq-answer"><p>Sim, trabalhamos para garantir que todo processo seja rápido e seguro. Não solicitamos informações sensíveis como dados de cartão e não há riscos de cobrança.</p></div>
+                </details>
+            </div>
         </div>
-    </footer>
+    </section>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+    <section class="cta-section" id="cta-final">
+        <div class="container">
+            <h2>Pronto para Revolucionar Sua Forma de Assistir TV?</h2>
+            <p>Não perca mais tempo! Solicite seu teste IPTV grátis agora mesmo e mergulhe em um universo de entretenimento sem limites. É rápido, fácil e totalmente sem compromisso.</p>
+            <a href="https://teste.iptvprobr.com/" class="btn btn-primary btn-large" target="_blank" rel="noopener">Quero Meu Teste Grátis Agora!</a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <a href="https://iptvprobr.com/" class="footer-brand">IPTVPRO<span class="highlight">BR</span></a>
+        <ul class="footer-links">
+            <li><a href="https://iptvprobr.com/">Teste IPTV</a></li>
+            <li><a href="/quem-somos" rel="noopener">Quem Somos</a></li>
+            <li><a href="https://teste.iptvprobr.com/" target="_blank" rel="noopener">Contato</a></li>
+            <li><a href="/politica-de-privacidade" rel="noopener">Política de Privacidade</a></li>
+            <li><a href="/termos-de-uso" rel="noopener">Termos de Uso</a></li>
+        </ul>
+        <div class="footer-copyright">
+            <p>© 2025 IPTV PRO BR. Todos os direitos reservados.</p>
+            <p class="legal-disclaimer">Este site oferece um teste gratuito para demonstração da tecnologia IPTV. É uma ótima forma de explorar o que o IPTV pode oferecer.</p>
+        </div>
+    </div>
+</footer>
+
+<a href="https://teste.iptvprobr.com/" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Solicitar Teste IPTV via WhatsApp">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false">
+        <path d="M16.21.02a16.05 16.05 0 0 0-15.7 16.3c0 3.72 1.27 7.16 3.5 9.94l-3.68 7.35 7.57-3.6a16.05 16.05 0 0 0 8.3 2.33h.02A16.06 16.06 0 0 0 16.2.03Zm7.63 23.26a2.33 2.33 0 0 1-1.63 1c-.4.06-.96.16-2.9-.57a13.38 13.38 0 0 1-7.2-6.6c-1.4-2.43-2.3-5.3-2.3-5.3s-.1-.27.1-.55a2.4 2.4 0 0 1 .6-.9c.27-.24.55-.32.76-.32.2 0 .4.04.58.07.23.04.38.06.55.35.2.3.73 1.74.8 1.87.05.16.08.35.03.53a.9.9 0 0 1-.3.58c-.13.16-.24.27-.38.42-.16.16-.33.35-.47.5-.2.2-.4.44-.18.82.2.32.88 1.48 1.9 2.43a10.6 10.6 0 0 0 3.08 2.33c.35.18.6.16.82-.08.23-.25.5-.62.65-.82s.3-.32.5-.2a3.74 3.74 0 0 1 2.28 1.08c.3.27.45.4.52.58.08.2.07.42-.03.65Z"></path>
+    </svg>
+</a>
+
+<script>
+    // --- Script para Navegação Ativa e Suave ---
+    const navLinks = document.querySelectorAll('#main-nav .nav-links a');
+    const sections = document.querySelectorAll('main section[id], header#hero[id]');
+    const mainNav = document.getElementById('main-nav');
+    const navHeight = mainNav ? mainNav.offsetHeight : 60; 
+
+    function changeLinkState() {
+        let index = sections.length;
+        const scrollYWithOffset = window.scrollY + navHeight + (window.innerHeight * 0.3); 
+
+        while(--index && scrollYWithOffset < sections[index].offsetTop) {}
+        
+        navLinks.forEach((link) => link.classList.remove('active'));
+        
+        const currentSection = sections[index];
+        if (currentSection) {
+             const activeLink = document.querySelector(`#main-nav .nav-links a[href="#${currentSection.id}"]`);
+             if (activeLink && activeLink.getAttribute('href').startsWith('#')) {
+                activeLink.classList.add('active');
+             }
+        }
+    }
+    if (sections.length > 0 && navLinks.length > 0) {
+        changeLinkState();
+        window.addEventListener('scroll', changeLinkState);
+    }
+    
+    // --- Script para Menu Mobile Hamburger ---
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navUl = document.getElementById('nav-links-menu');
+
+    if (mobileMenuToggle && navUl) {
+        mobileMenuToggle.addEventListener('click', () => {
+            const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true' || false;
+            mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
+            navUl.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navUl.classList.contains('active')) {
+                    if (link.getAttribute('href').startsWith('#')) {
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                        navUl.classList.remove('active');
+                    }
+                }
+            });
+        });
+    }
+</script>
