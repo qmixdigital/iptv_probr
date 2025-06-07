@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste IPTV Grátis: Explore o Melhor do Streaming Sem Compromisso | IPTV PRO BR</title>
     <meta name="description" content="Descubra a liberdade do IPTV com nosso teste grátis! Qualidade, variedade e acesso imediato. Solicite seu Teste IPTV grátis e experimente agora sem cartão ou compromisso.">
-    <link rel="canonical" href="https://iptvprobr.com/teste-iptv-gratis"> {/* URL CORRIGIDA */}
+    <link rel="canonical" href="https://iptvprobr.com/teste-iptv-gratis">
     <meta name="robots" content="index,follow">
 
     <meta property="og:title" content="Teste IPTV Grátis: Streaming de Qualidade Sem Compromisso Futuro - IPTV PRO BR">
@@ -13,7 +13,7 @@
     <meta property="og:image" content="https://iptvprobr.com/images/teste-iptv-pro-brasil.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://iptvprobr.com/teste-iptv-gratis"> {/* URL CORRIGIDA */}
+    <meta property="og:url" content="https://iptvprobr.com/teste-iptv-gratis">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="IPTV PRO BR">
 
@@ -67,7 +67,7 @@
           "price": "0",
           "priceCurrency": "BRL",
           "availability": "https://schema.org/InStock",
-          "url": "https://iptvprobr.com/teste-iptv-gratis" // Link para a página de solicitação do teste
+          "url": "https://iptvprobr.com/teste-iptv-gratis" 
         }
       }
     }
@@ -145,7 +145,7 @@
             --cta-bg-color: #005C8A; 
             
             --background-color: #121212; 
-            --background-gradient-end: #1A1A1A; /* Cor final do gradiente */
+            --background-gradient-end: #1A1A1A; 
             --surface-color: #1E1E1E; 
             --surface-hover: #2a2a2a;
             --border-color: #383838; 
@@ -181,7 +181,6 @@
         }
 
         body {
-            /* DEGRADÊ MODERNO APLICADO AQUI */
             background: linear-gradient(135deg, var(--background-color) 0%, var(--background-gradient-end) 100%);
             color: var(--text-color);
             font-family: var(--font-body);
@@ -221,7 +220,6 @@
         a { color: var(--primary-color); text-decoration: none; transition: color 0.2s ease; } 
         a:hover { color: var(--primary-hover); }
 
-        /* --- Navbar --- */
         .navbar {
             background-color: rgba(18, 18, 18, 0.9); 
             backdrop-filter: blur(8px); 
@@ -263,7 +261,6 @@
         }
         .mobile-menu-toggle { display: none; }
 
-        /* --- Hero Section --- */
         .hero {
             background: linear-gradient(rgba(18, 18, 18, 0.92), rgba(18, 18, 18, 0.99)), 
                         url('images/hero-background-iptv.webp') no-repeat center center/cover; 
@@ -294,7 +291,6 @@
             margin-right: auto;
         }
 
-        /* --- Buttons --- */
         .btn {
             display: inline-block;
             padding: 0.75em 1.8em; 
@@ -332,11 +328,10 @@
         }
         .btn-group { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; } 
 
-        /* --- Section General --- */
         .section {
             padding: var(--section-padding);
         }
-        .section-darker { background-color: rgba(0,0,0,0.1); /* Para destacar sobre o gradiente do body */ }
+        .section-darker { background-color: rgba(0,0,0,0.1); }
         .section-title { text-align: center; margin-bottom: 2.5rem; } 
         .section-title h2 { font-weight: 700; }
         .section-title h2 .highlight { color: var(--primary-color); }
@@ -348,7 +343,6 @@
             font-weight: 300;
         }
 
-        /* --- Diferenciais/Features Section --- */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
@@ -364,21 +358,24 @@
             transition: transform 0.2s ease, box-shadow 0.2s ease; 
             display: flex; 
             flex-direction: column; 
+            align-items: center; /* Centraliza a imagem se ela for menor que o card */
         }
         .feature-card:hover { 
             transform: translateY(-5px); 
             box-shadow: 0 7px 18px rgba(0, 174, 239, 0.12); 
         }
-        /* ESTILO DA IMAGEM DA SEÇÃO "DIFERENCIAIS" ALTERADO */
+        /* ===== ESTILO DA IMAGEM DA SEÇÃO "DIFERENCIAIS" ATUALIZADO ===== */
         .feature-card img.feature-icon {
-            width: 140px;  /* LARGURA AUMENTADA */
-            height: 140px; /* ALTURA AUMENTADA PARA MANTER QUADRADO */
-            object-fit: contain; /* GARANTE QUE A IMAGEM APAREÇA EM SUA TOTALIDADE */
-            margin: 0 auto 1.5rem auto;
-            border-radius: var(--border-radius); /* CANTO SUAVEMENTE ARREDONDADO, NÃO CIRCULAR */
+            width: 340px;  /* LARGURA DESEJADA */
+            height: 280px; /* ALTURA DESEJADA */
+            max-width: 100%; /* IMPORTANTE: Para responsividade, não ultrapassar o card */
+            object-fit: contain; /* Garante que a imagem inteira seja visível, sem cortes e mantendo proporção */
+            margin: 0 auto 1.5rem auto; /* Centraliza horizontalmente e adiciona margem inferior */
+            border-radius: var(--border-radius); /* Cantos suavemente arredondados */
             border: 1px solid var(--border-color); 
-            padding: 8px; /* PEQUENO ESPAÇAMENTO INTERNO */
-            background-color: var(--background-color); /* FUNDO CASO A IMAGEM SEJA TRANSPARENTE */
+            padding: 5px; /* Pequeno preenchimento interno ao redor da imagem */
+            background-color: var(--background-color); /* Cor de fundo caso a imagem tenha transparência */
+            display: block; /* Para margin:auto funcionar corretamente */
         }
         .feature-card h3 {
             color: var(--text-headings);
@@ -392,7 +389,6 @@
             flex-grow: 1; 
         }
 
-        /* --- Como Funciona (Steps) --- */
         .steps-container {
             display: flex;
             flex-direction: column;
@@ -440,8 +436,6 @@
              margin-top: 2rem; 
         }
 
-
-        /* --- Content Section (Geral para texto + imagem) --- */
         .content-image-layout {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -467,8 +461,6 @@
         }
          .content-image-layout .btn { margin-top: 1em; } 
 
-
-        /* --- Testimonials --- */
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
@@ -512,7 +504,6 @@
         }
         .testimonial-card p.author strong { color: var(--text-headings); }
 
-        /* --- FAQ --- */
         .faq-list { max-width: 720px; margin: 0 auto; } 
         .faq-item {
             background-color: var(--surface-color);
@@ -553,7 +544,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* --- CTA Section --- */
         .cta-section {
             background-color: var(--cta-bg-color); 
             padding: 3.5rem 0; 
@@ -572,9 +562,8 @@
             transform: translateY(-1px) scale(1.02); 
         }
         
-        /* --- Footer --- */
         .footer {
-            background-color: var(--background-color); /* Usar cor base do body ou surface para consistência com o gradiente */
+            background-color: var(--background-color); 
             padding: 2.5rem 0 1.2rem; 
             border-top: 1px solid var(--border-color);
         }
@@ -593,7 +582,6 @@
         .footer-copyright { font-size: var(--font-size-smaller); color: #999; text-align: center; } 
         .footer-copyright .legal-disclaimer { font-size: calc(var(--font-size-smaller) - 0.05rem); color: #888; margin-top: 0.4rem; } 
 
-        /* --- WhatsApp Float --- */
         .whatsapp-float {
             position: fixed;
             width: 48px; height: 48px; 
@@ -626,10 +614,7 @@
             .step-content p { font-size: var(--font-size-base); }
             .testimonial-card p.quote { font-size: 0.95rem; }
             .faq-answer { font-size: var(--font-size-base); }
-            .feature-card img.feature-icon { /* Ajuste de tamanho para tablet */
-                 width: 120px; 
-                 height: 120px;
-            }
+            /* As regras específicas de width/height para .feature-card img.feature-icon foram removidas daqui */
         }
 
         @media (min-width: 993px) { 
@@ -639,16 +624,13 @@
             .features-grid {
                 grid-template-columns: repeat(3, 1fr); 
             }
-             .feature-card img.feature-icon { /* Tamanho final para desktop */
-                width: 140px; 
-                height: 140px;
-            }
             .content-image img {
                 max-width: 450px; 
             }
              .testimonial-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
+            /* As regras específicas de width/height para .feature-card img.feature-icon foram removidas daqui */
         }
 
         @media (max-width: 992px) { 
@@ -708,10 +690,6 @@
             }
 
             .features-grid { grid-template-columns: 1fr; } 
-            .feature-card img.feature-icon { /* Ajuste de tamanho para mobile */
-                 width: 100px; 
-                 height: 100px;
-            }
             .section-title { margin-bottom: 1.8rem; } 
             .section-title h2 { font-size: clamp(1.5rem, 5vw, 2rem); }
             .section-title p.lead { font-size: 0.9rem; }
@@ -728,17 +706,18 @@
             .footer-brand, .footer-copyright, .footer-copyright .legal-disclaimer { text-align: left; }
             .footer-links { justify-content: flex-start; flex-direction: column; align-items: flex-start; gap: 0.4rem; } 
             .footer-links li { margin-left: 0; }
+            /* As regras específicas de width/height para .feature-card img.feature-icon foram removidas daqui */
         }
          @media (max-width: 480px) { 
             .hero h1 { font-size: clamp(1.7rem, 6vw, 2.2rem); }
             .content-image img { max-width: 90%; } 
-            .feature-card img.feature-icon { width: 90px; height: 90px;} 
             .btn-group .btn { min-width: 160px; }
             .section-padding { padding: 40px 0; }
             h2 { font-size: clamp(1.4rem, 4vw, 1.8rem); }
             h3 { font-size: clamp(1.1rem, 3vw, 1.4rem); }
             .faq-item summary h3 { font-size: 0.95rem; }
             .hero p.subtitle { font-size: 0.9rem; }
+            /* As regras específicas de width/height para .feature-card img.feature-icon foram removidas daqui */
         }
 
     </style>
@@ -868,7 +847,6 @@
                         <a href="https://teste.iptvprobr.com/" class="btn btn-secondary" target="_blank" rel="noopener">Explorar Conteúdo Agora</a>
                     </div>
                     <div class="content-image">
-                        <!-- Mudei a imagem aqui para variar um pouco, já que a de 8 horas estava na seção de diferenciais -->
                         <img src="images/teste%20iptv%20xciptv.webp" alt="Interface e variedade de conteúdo no Teste IPTV Grátis" loading="lazy">
                     </div>
                 </div>
@@ -903,7 +881,6 @@
                     <h2>Perguntas <span class="highlight">Frequentes sobre o Teste IPTV</span></h2>
                 </div>
                 <div class="faq-list">
-                    <!-- FAQ ATUALIZADO CONFORME SOLICITADO -->
                     <details class="faq-item">
                         <summary><h3>Você tem teste IPTV via e-mail?</h3><span class="faq-icon">+</span></summary>
                         <div class="faq-answer"><p>Ainda não oferecemos teste IPTV pelo e-mail. Esse recurso pode ser adicionado a qualquer momento; acompanhe nossos canais para novidades sobre o <strong>Teste IPTV grátis</strong>.</p></div>
