@@ -10,7 +10,7 @@
 
     <meta property="og:title" content="Teste IPTV XCIPTV 6 Horas Grátis - IPTV PRO BR">
     <meta property="og:description" content="Experimente nosso teste IPTV XCIPTV por 6 horas. Acesso total ao conteúdo premium com o popular player XCIPTV. Solicite já! (Sujeito à disponibilidade)">
-    <meta property="og:image" content="https://iptvprobr.com/images/teste-iptv-pro-brasil.webp"> <!-- Manter a imagem genérica ou criar uma específica -->
+    <meta property="og:image" content="https://iptvprobr.com/images/teste-iptv-pro-brasil.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://iptvprobr.com/teste-iptv-xciptv-6-horas">
@@ -20,9 +20,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Garanta Seu Teste IPTV XCIPTV 6 Horas - IPTV PRO BR">
     <meta name="twitter:description" content="Desfrute de um teste IPTV XCIPTV de 6 horas e descubra a melhor programação. Fácil configuração e acesso imediato. (Verifique disponibilidade)">
-    <meta name="twitter:image" content="https://iptvprobr.com/images/teste-iptv-pro-brasil.webp"> <!-- Manter a imagem genérica ou criar uma específica -->
+    <meta name="twitter:image" content="https://iptvprobr.com/images/teste-iptv-pro-brasil.webp">
 
-    <link rel="icon" href="../images/teste_iptv_pro_favicon.svg" type="image/svg+xml"> <!-- Ajustado caminho se necessário -->
+    <link rel="icon" href="../images/teste_iptv_pro_favicon.svg" type="image/svg+xml">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,15 +67,45 @@
         "areaServed": "BR",
         "serviceOutput": {
             "@type": "Product",
-            "name": "Acesso a 6 horas de IPTV via XCIPTV (sujeito à disponibilidade)"
-        },
+            "name": "Acesso a 6 horas de IPTV via XCIPTV (sujeito à disponibilidade)",
+            "description": "Teste gratuito de 6 horas do nosso serviço IPTV, compatível com XCIPTV, para explorar canais, filmes e séries.",
+            "image": "https://iptvprobr.com/images/teste-iptv-xciptv.webp", // Adicione uma imagem representativa do produto/serviço de teste
+            "sku": "TESTE-IPTV-XCIPTV-6H", // Um SKU (Stock Keeping Unit) ou identificador único
+            "brand": {
+                "@type": "Brand",
+                "name": "IPTV PRO BR"
+            },
+            "offers": { // << AJUSTE AQUI: offers DENTRO do serviceOutput (Product)
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "BRL",
+                "availability": "https://schema.org/InStock", // Ou LimitedAvailability se aplicável
+                "url": "https://iptvprobr.com/teste-iptv-xciptv-6-horas", // URL para obter esta oferta específica
+                "priceValidUntil": "2025-12-31", // Opcional, mas bom ter
+                "eligibleQuantity": {
+                    "@type": "QuantitativeValue",
+                    "value": 1 
+                },
+                "seller": {
+                    "@type": "Organization",
+                    "name": "IPTV PRO BR"
+                }
+            }
+        }
+        // A propriedade "offers" abaixo é para o "Service" principal, não para o "serviceOutput".
+        // Se o "Service" em si também tem uma oferta direta (além do teste), mantenha.
+        // Caso contrário, e se o único "produto/oferta" for o teste descrito em serviceOutput, 
+        // esta seção "offers" no nível do "Service" pode ser redundante ou até confusa para o Google.
+        // Por ora, manterei como estava, pois pode ser que o "Service" tenha outras ofertas além do teste.
+        /* 
         "offers": {
           "@type": "Offer",
-          "price": "0",
+          "price": "0", // Se o serviço principal (além do teste) também for gratuito, senão ajuste
           "priceCurrency": "BRL",
-          "availability": "https://schema.org/InStock", // Pode ser ajustado para https://schema.org/LimitedAvailability se apropriado
+          "availability": "https://schema.org/InStock", 
           "url": "https://iptvprobr.com/teste-iptv-xciptv-6-horas" 
         }
+        */
       }
     }
     </script>
@@ -355,11 +385,11 @@
             text-align: center;
         }
         .hero-content .availability-notice {
-            text-align: left; /* Alinhamento para hero em mobile */
+            text-align: left; 
         }
         @media (min-width: 769px) {
             .hero-content .availability-notice {
-                text-align: center; /* Centraliza em telas maiores */
+                text-align: center; 
             }
         }
         .availability-notice a {
@@ -370,7 +400,7 @@
             color: var(--primary-hover);
             text-decoration: none;
         }
-        .cta-section .availability-notice { /* Para o CTA final */
+        .cta-section .availability-notice { 
             margin-top: 1.2em;
             color: rgba(255,255,255,0.75);
         }
@@ -819,32 +849,32 @@
                 </div>
                 <div class="features-grid">
                     <div class="feature-card">
-                        <img src="../images/teste%20IPTV%208%20horas.webp" alt="Teste IPTV XCIPTV com 6 horas de duração" class="feature-icon" loading="lazy"> <!-- Ajustado caminho se necessário -->
+                        <img src="images/teste%20IPTV%208%20horas.webp" alt="Teste IPTV XCIPTV com 6 horas de duração" class="feature-icon" loading="lazy">
                         <h3>DURAÇÃO IDEAL DE 6 HORAS</h3>
                         <p>Com <strong>6 horas de teste IPTV XCIPTV</strong>, você tem tempo de sobra para explorar canais, filmes e séries no seu ritmo.</p>
                     </div>
                     <div class="feature-card">
-                        <img src="../images/teste%20iptv%206%20horas.webp" alt="Configuração simplificada para teste IPTV XCIPTV" class="feature-icon" loading="lazy"> <!-- Ajustado caminho se necessário -->
+                        <img src="images/teste%20iptv%206%20horas.webp" alt="Configuração simplificada para teste IPTV XCIPTV" class="feature-icon" loading="lazy">
                         <h3>PERFEITO PARA XCIPTV</h3>
                         <p>Nosso sistema é totalmente otimizado para o <strong>aplicativo XCIPTV</strong>, garantindo configuração rápida e uso intuitivo durante seu teste de 6 horas.</p>
                     </div>
                     <div class="feature-card">
-                        <img src="../images/teste%20iptv%20imediato.webp" alt="Acesso rápido ao teste IPTV XCIPTV 6 horas" class="feature-icon" loading="lazy"> <!-- Ajustado caminho se necessário -->
+                        <img src="images/teste%20iptv%20imediato.webp" alt="Acesso rápido ao teste IPTV XCIPTV 6 horas" class="feature-icon" loading="lazy">
                         <h3>ACESSO IMEDIATO AO TESTE</h3>
                         <p>Solicite e receba os dados do seu <strong>teste IPTV XCIPTV 6 horas</strong> em minutos, para começar a assistir sem demora.</p>
                     </div>
                     <div class="feature-card">
-                        <img src="../images/teste%20iptv%20via%20email.webp" alt="Suporte para o teste IPTV XCIPTV de 6 horas" class="feature-icon" loading="lazy"> <!-- Ajustado caminho se necessário -->
+                        <img src="images/teste%20iptv%20via%20email.webp" alt="Suporte para o teste IPTV XCIPTV de 6 horas" class="feature-icon" loading="lazy">
                         <h3>SUPORTE ESPECIALIZADO</h3>
                         <p>Nossa equipe está pronta para auxiliar na configuração do seu <strong>teste de 6 horas no XCIPTV</strong>, caso precise de ajuda.</p>
                     </div>
                     <div class="feature-card">
-                        <img src="../images/teste%20iptv%20xciptv.webp" alt="Qualidade de imagem no teste IPTV XCIPTV" class="feature-icon" loading="lazy"> <!-- Ajustado caminho se necessário -->
+                        <img src="images/teste%20iptv%20xciptv.webp" alt="Qualidade de imagem no teste IPTV XCIPTV" class="feature-icon" loading="lazy">
                         <h3>QUALIDADE SUPERIOR</h3>
                         <p>Experimente a alta definição e estabilidade do nosso serviço durante seu <strong>teste IPTV XCIPTV de 6 horas</strong>.</p>
                     </div>
                     <div class="feature-card">
-                        <img src="../images/gerador%20de%20teste%20IPTV.webp" alt="Teste IPTV XCIPTV 6 horas sem compromisso" class="feature-icon" loading="lazy"> <!-- Ajustado caminho se necessário -->
+                        <img src="images/gerador%20de%20teste%20IPTV.webp" alt="Teste IPTV XCIPTV 6 horas sem compromisso" class="feature-icon" loading="lazy">
                         <h3>TOTALMENTE SEM COMPROMISSO</h3>
                         <p>O <strong>teste IPTV XCIPTV 6 horas</strong> é 100% gratuito e não exige nenhum tipo de fidelidade ou dados de cartão.</p>
                     </div>
@@ -906,7 +936,7 @@
                         <a href="https://teste.iptvprobr.com/" class="btn btn-secondary" target="_blank" rel="noopener">COMEÇAR MEU TESTE DE 6 HORAS</a>
                     </div>
                     <div class="content-image">
-                        <img src="../images/teste%20iptv%20xciptv.webp" alt="Demonstração do Teste IPTV XCIPTV 6 Horas em funcionamento" loading="lazy"> <!-- Ajustado caminho se necessário -->
+                        <img src="images/teste%20iptv%20xciptv.webp" alt="Demonstração do Teste IPTV XCIPTV 6 Horas em funcionamento" loading="lazy"> 
                     </div>
                 </div>
             </div>
