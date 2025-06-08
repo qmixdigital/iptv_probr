@@ -3,37 +3,79 @@
 
   <url>
     <loc>https://iptvprobr.com/</loc>
-    <lastmod>2025-06-06</lastmod> <!-- Atualize com a data da última modificação real -->
+    <lastmod>2024-07-26</lastmod> 
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://iptvprobr.com/quem-somos.html</loc>
-    <lastmod>2025-06-06</lastmod> <!-- Atualize com a data da última modificação real -->
+    <lastmod>2024-07-26</lastmod> 
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://iptvprobr.com/politica-de-privacidade.html</loc>
-    <lastmod>2025-06-06</lastmod> <!-- Atualize com a data da última modificação real -->
+    <lastmod>2024-07-26</lastmod> 
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://iptvprobr.com/termos-de-uso.html</loc>
-    <lastmod>2025-06-06</lastmod> <!-- Atualize com a data da última modificação real -->
+    <lastmod>2024-07-26</lastmod> 
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://teste.iptvprobr.com/</loc>
-    <lastmod>2025-06-06</lastmod> <!-- Data da última modificação da página de teste -->
+    <lastmod>2024-07-26</lastmod> 
     <changefreq>monthly</changefreq> 
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://iptvprobr.com/gerador-de-teste-iptv-72-horas.html</loc>
+    <lastmod>2024-07-26</lastmod> 
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://iptvprobr.com/teste-iptv-gratis.html</loc>
+    <lastmod>2024-07-26</lastmod> 
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://iptvprobr.com/teste-iptv-imediato.html</loc>
+    <lastmod>2024-07-26</lastmod> 
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://iptvprobr.com/teste-iptv-pelo-whatsapp.html</loc>
+    <lastmod>2024-07-26</lastmod> 
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://iptvprobr.com/teste-iptv-via-e-mail.html</loc>
+    <lastmod>2024-07-26</lastmod> 
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://iptvprobr.com/teste-iptv-xciptv-6-horas.html</loc>
+    <lastmod>2024-07-26</lastmod> 
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
