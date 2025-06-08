@@ -28,12 +28,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&display=swap">
     
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> <!-- SUBSTITUA SEU ID -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-STCTT0MKLF"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX'); // SUBSTITUA SEU ID
+
+      gtag('config', 'G-STCTT0MKLF');
     </script>
 
     <!-- Schema.org JSON-LD -->
@@ -204,12 +206,12 @@
             font-weight: 500;
             letter-spacing: 0.3px; 
         }
+        h1, h2, h3 { text-transform: uppercase; } /* Aplicando uppercase para h1, h2 e h3 */
         h1 { font-size: clamp(2.2rem, 4.5vw, 3.5rem); margin-bottom: 0.5em; } 
-        h2, h3 { text-transform: uppercase; } /* Aplicando uppercase para h2 e h3 */
         h2 { font-size: clamp(1.7rem, 3.5vw, 2.6rem); margin-bottom: 0.6em; } 
         h3 { font-size: clamp(1.3rem, 2.8vw, 1.8rem); margin-bottom: 0.4em; } 
         
-        .faq-item summary h3 { /* Mantém o estilo específico do h3 do FAQ, já que o uppercase geral foi aplicado */
+        .faq-item summary h3 { 
             font-size: 1.05rem; 
             font-weight: 500; 
             margin:0; 
@@ -382,7 +384,7 @@
             background-color: var(--background-color); 
             display: block; 
         }
-        .feature-card h3 { /* O text-transform: uppercase já foi aplicado globalmente para h3 */
+        .feature-card h3 { 
             color: var(--text-headings);
             font-size: 1.25rem; 
             font-weight: 600; 
@@ -430,7 +432,7 @@
             font-family: var(--font-headings);
             flex-shrink: 0; 
         }
-        .step-content h3 { /* O text-transform: uppercase já foi aplicado globalmente para h3 */
+        .step-content h3 { 
             font-size: 1.15rem; 
             color: var(--text-headings);
             margin-bottom: 0.25em; 
