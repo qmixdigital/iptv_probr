@@ -39,7 +39,7 @@
     </script>
 
     <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
@@ -57,93 +57,52 @@
       "mainEntity": {
         "@type": "Product",
         "name": "Serviço de IPTV para TV Box",
-        "description": "Serviço de IPTV de alta qualidade otimizado para dispositivos TV Box, oferecendo acesso a uma vasta gama de canais ao vivo, filmes e séries.",
+        "description": "Serviço de IPTV de alta qualidade otimizado para dispositivos TV Box, oferecendo acesso a uma vasta gama de canais ao vivo, filmes e séries. Consulte nossos planos e solicite um teste.",
         "brand": {
           "@type": "Brand",
           "name": "IPTV PRO BR"
         },
-        "image": "https://iptvprobr.com/images/teste%20iptv%20xciptv.webp",
+        "image": "https://iptvprobr.com/images/teste%20iptv%20xciptv.webp", // Imagem representativa do serviço para TV Box
+        "sku": "IPTV-SERVICE-TVBOX-PROBR", // SKU mais específico
+        "mpn": "IPTVPROBR-TVBOX-SERVICE-001", // MPN mais específico
         "offers": {
           "@type": "Offer",
           "priceCurrency": "BRL",
+          "price": "0.00", //  Representa um teste gratuito ou consulta inicial. Se houver planos, pode ser o menor preço.
+          "priceValidUntil": "2025-12-31", // Opcional, mas bom para ofertas
+          "itemCondition": "https://schema.org/NewCondition",
           "availability": "https://schema.org/InStock",
+          "url": "https://teste.iptvprobr.com/", // URL da oferta/consulta/teste
           "seller": {
             "@type": "Organization",
             "name": "IPTV PRO BR"
-          },
-           "url": "https://teste.iptvprobr.com/" 
+          }
+          // Para "hasMerchantReturnPolicy", se aplicável:
+          // ,"hasMerchantReturnPolicy": {
+          //   "@type": "MerchantReturnPolicy",
+          //   "applicableCountry": "BR",
+          //   "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted", // ou outra política
+          //   "merchantReturnLink": "https://iptvprobr.com/politica-de-cancelamento" // Exemplo
+          // }
         },
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.8",
             "reviewCount": "275" 
         }
+        // "review": [ // Exemplo de como adicionar reviews
+        //   {
+        //     "@type": "Review",
+        //     "author": {"@type": "Person", "name": "Carlos M."},
+        //     "datePublished": "2024-05-10",
+        //     "reviewBody": "Excelente serviço de IPTV para minha TV Box, muitos canais e ótima estabilidade!",
+        //     "reviewRating": {
+        //       "@type": "Rating",
+        //       "ratingValue": "5"
+        //     }
+        //   }
+        // ]
       }
-    }
-    </script>
-     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "O QUE É IPTV TV BOX E COMO FUNCIONA?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "IPTV TV Box refere-se ao uso de um dispositivo TV Box (geralmente Android) para acessar conteúdo de televisão via protocolo de internet (IPTV). Você instala um aplicativo reprodutor de IPTV no seu TV Box, insere os dados de uma lista IPTV (como a fornecida pela IPTV PRO BR) e tem acesso a canais, filmes e séries."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "QUAIS SÃO OS MELHORES APLICATIVOS IPTV PARA TV BOX?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Existem diversos aplicativos IPTV populares para TV Box, como IPTV Smarters Pro, XCIPTV Player, Perfect Player, Tivimate, entre outros. A escolha depende da sua preferência de interface e recursos. A IPTV PRO BR fornece listas compatíveis com a maioria dos aplicativos."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "A IPTV PRO BR OFERECE LISTAS ESPECÍFICAS PARA IPTV TV BOX?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim, nossas listas IPTV são totalmente compatíveis e otimizadas para dispositivos TV Box. Fornecemos os dados necessários (URL M3U, API Xtream Codes, etc.) para uma fácil configuração no seu aplicativo IPTV preferido em seu TV Box."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "É FÁCIL CONFIGURAR IPTV EM UM TV BOX?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim, a configuração de IPTV em um TV Box é geralmente simples. Basta instalar um aplicativo reprodutor de IPTV da loja de aplicativos do seu TV Box (ou via APK, se necessário), inserir os dados da sua lista IPTV fornecida por nós, e você estará pronto para assistir. Oferecemos suporte para auxiliar nesse processo."
-          }
-        },
-         {
-          "@type": "Question",
-          "name": "QUAL A QUALIDADE DE TRANSMISSÃO DO IPTV EM UM TV BOX COM A IPTV PRO BR?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Com a IPTV PRO BR, você pode esperar uma excelente qualidade de transmissão em seu TV Box, com canais em HD, Full HD e até 4K (conforme disponibilidade do conteúdo e da sua conexão de internet). Priorizamos a estabilidade para uma experiência de visualização fluida e sem interrupções."
-          }
-        }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "IPTV PRO BR",
-        "item": "https://iptvprobr.com/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "IPTV TV Box",
-        "item": "https://iptvprobr.com/iptv-tv-box"
-      }]
     }
     </script>
 
