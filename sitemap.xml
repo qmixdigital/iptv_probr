@@ -3,79 +3,148 @@
 
   <url>
     <loc>https://iptvprobr.com/</loc>
-    <lastmod>2024-07-26</lastmod> 
+    <lastmod>2024-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://iptvprobr.com/quem-somos.html</loc>
-    <lastmod>2024-07-26</lastmod> 
+    <loc>https://iptvprobr.com/quem-somos</loc>
+    <lastmod>2024-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://iptvprobr.com/politica-de-privacidade.html</loc>
-    <lastmod>2024-07-26</lastmod> 
+    <loc>https://iptvprobr.com/politica-de-privacidade</loc>
+    <lastmod>2024-07-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
-
   <url>
-    <loc>https://iptvprobr.com/termos-de-uso.html</loc>
-    <lastmod>2024-07-26</lastmod> 
+    <loc>https://iptvprobr.com/termos-de-uso</loc>
+    <lastmod>2024-07-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
-  
   <url>
-    <loc>https://teste.iptvprobr.com/</loc>
-    <lastmod>2024-07-26</lastmod> 
-    <changefreq>monthly</changefreq> 
+    <loc>https://iptvprobr.com/gerador-de-teste-iptv-72-horas</loc>
+    <lastmod>2024-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://iptvprobr.com/iptv-para-pc</loc>
+    <lastmod>2024-07-26</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://iptvprobr.com/gerador-de-teste-iptv-72-horas.html</loc>
-    <lastmod>2024-07-26</lastmod> 
+    <loc>https://iptvprobr.com/iptv-para-roku-tv</loc>
+    <lastmod>2024-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://iptvprobr.com/iptv-tv-box</loc>
+    <lastmod>2024-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://iptvprobr.com/lista-iptv-teste</loc>
+    <lastmod>2024-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://iptvprobr.com/teste-iptv-automatico-o-melhor</loc>
+    <lastmod>2024-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://iptvprobr.com/teste-iptv-gratis.html</loc>
-    <lastmod>2024-07-26</lastmod> 
+    <loc>https://iptvprobr.com/teste-iptv-core</loc>
+    <lastmod>2024-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://iptvprobr.com/teste-iptv-imediato.html</loc>
-    <lastmod>2024-07-26</lastmod> 
+    <loc>https://iptvprobr.com/teste-iptv-gratis</loc>
+    <lastmod>2024-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://iptvprobr.com/teste-iptv-pelo-whatsapp.html</loc>
-    <lastmod>2024-07-26</lastmod> 
+    <loc>https://iptvprobr.com/teste-iptv-imediato</loc>
+    <lastmod>2024-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://iptvprobr.com/teste-iptv-via-e-mail.html</loc>
-    <lastmod>2024-07-26</lastmod> 
+    <loc>https://iptvprobr.com/teste-iptv-pelo-whatsapp</loc>
+    <lastmod>2024-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://iptvprobr.com/teste-iptv-xciptv-6-horas.html</loc>
-    <lastmod>2024-07-26</lastmod> 
+    <loc>https://iptvprobr.com/teste-iptv-smarters-player</loc>
+    <lastmod>2024-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://iptvprobr.com/teste-iptv-ssiptv</loc>
+    <lastmod>2024-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://iptvprobr.com/teste-iptv-via-e-mail</loc>
+    <lastmod>2024-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://iptvprobr.com/teste-iptv-vu-player</loc>
+    <lastmod>2024-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://iptvprobr.com/teste-iptv-xciptv-48h</loc>
+    <lastmod>2024-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://iptvprobr.com/teste-iptv-xciptv-6-horas</loc>
+    <lastmod>2024-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://iptvprobr.com/teste-iptv-xcloud</loc>
+    <lastmod>2024-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://iptvprobr.com/teste-iptv-xtream-player</loc>
+    <lastmod>2024-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://iptvprobr.com/xciptv-teste-7-dias</loc>
+    <lastmod>2024-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://teste.iptvprobr.com/</loc>
+    <lastmod>2024-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
